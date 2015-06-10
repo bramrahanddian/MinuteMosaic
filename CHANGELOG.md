@@ -10,3 +10,8 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 - Rule wording in `docs/heuristics.md` is being reviewed for the next patch.
 
 ## [1.0.0] — 2026-05-19
+
+### Added
+- `PrivacySettings.shareSafe` preset: `.days(30)` retention plus transcript
+  redaction and speaker pseudonymization in one call.
+- Stability commitment for the CLI contract: `segments`, `decisions`, `actions`
