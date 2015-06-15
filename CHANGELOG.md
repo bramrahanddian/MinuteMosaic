@@ -20,3 +20,7 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 ### Changed
 - Every extracted claim now carries a human-readable `note` in its provenance,
   explaining any inferred owner/due value.
+
+## [0.9.0] — 2025-06-17
+
+### Added
