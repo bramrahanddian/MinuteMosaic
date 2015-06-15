@@ -24,3 +24,8 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 ## [0.9.0] — 2025-06-17
 
 ### Added
+- `TimelineRenderer` layout of stained-glass facets and self-contained SVG
+  export from a report JSON.
+- Retention windows (`PrivacySettings.retention`) with pure
+  `RetentionEngine.isExpired` checks for background pruning.
+
