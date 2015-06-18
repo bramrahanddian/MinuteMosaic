@@ -29,3 +29,7 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 - Retention windows (`PrivacySettings.retention`) with pure
   `RetentionEngine.isExpired` checks for background pruning.
 
+## [0.8.0] — 2024-09-17
+
+### Added
+- Swift local model (`Meeting`, `Event`, provenance) mirroring the Python world.
