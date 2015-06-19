@@ -33,3 +33,8 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 
 ### Added
 - Swift local model (`Meeting`, `Event`, provenance) mirroring the Python world.
+- `mm-timeline` executable that reads the Python report JSON and prints or
+  exports the evidence timeline.
+
+## [0.7.0] — 2023-11-14
+
