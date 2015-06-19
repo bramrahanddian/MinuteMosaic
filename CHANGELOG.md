@@ -38,3 +38,8 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 
 ## [0.7.0] — 2023-11-14
 
+### Added
+- Talk-time totals and per-topic speaker listings in the report stats.
+- `docs/heuristics.md`: the full rule table with example triggers and base
+  confidences, so output stays predictable by reading.
+
