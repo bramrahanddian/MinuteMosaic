@@ -43,3 +43,7 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 - `docs/heuristics.md`: the full rule table with example triggers and base
   confidences, so output stays predictable by reading.
 
+## [0.6.0] — 2022-08-30
+
+### Added
+- Self-contained HTML report: inline CSS, no CDN, no fetched fonts, clickable
