@@ -47,3 +47,8 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 
 ### Added
 - Self-contained HTML report: inline CSS, no CDN, no fetched fonts, clickable
+  evidence links from every decision/action back to its source utterance.
+
+## [0.5.0] — 2021-02-16
+
+### Added
