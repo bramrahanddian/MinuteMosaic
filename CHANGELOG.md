@@ -52,3 +52,7 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 ## [0.5.0] — 2021-02-16
 
 ### Added
+- `Provenance` on every decision and action: `rule_id`, matched `trigger`,
+  `utterance_indices` and a note. Confidence clipped to `[0.05, 0.99]`.
+
+## [0.4.0] — 2019-10-08
