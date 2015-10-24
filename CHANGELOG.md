@@ -56,3 +56,8 @@ its scope: it does **not** transcribe audio and has **no** remote service.
   `utterance_indices` and a note. Confidence clipped to `[0.05, 0.99]`.
 
 ## [0.4.0] — 2019-10-08
+
+### Added
+- Action extraction with `action.assign`, `action.imperative` and
+  `action.followup` rules.
+- Owner and due inference with bounded confidence bonuses (`+0.12` owner,
