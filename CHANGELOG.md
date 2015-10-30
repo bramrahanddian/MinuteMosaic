@@ -61,3 +61,8 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 - Action extraction with `action.assign`, `action.imperative` and
   `action.followup` rules.
 - Owner and due inference with bounded confidence bonuses (`+0.12` owner,
+  `+0.10` due).
+
+## [0.3.0] — 2018-06-05
+
+### Added
