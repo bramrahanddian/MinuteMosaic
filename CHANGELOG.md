@@ -66,3 +66,7 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 ## [0.3.0] — 2018-06-05
 
 ### Added
+- Explainable decision extraction: ordered `decide.*` regex rules,
+  strongest-first, base confidence per rule.
+
+## [0.2.0] — 2017-03-21
