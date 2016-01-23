@@ -8,3 +8,5 @@ reader can audit.
 ## Development setup
 
 - **Python 3.9+** — the CLI and library are stdlib-only; there is nothing to
+  install and no virtualenv is required.
+
