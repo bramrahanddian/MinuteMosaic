@@ -15,3 +15,5 @@ python -m compileall -q python/src/minutemosaic
 cd python/src
 python -m minutemosaic segments  ../../examples/product-sync.jsonl
 python -m minutemosaic decisions ../../examples/product-sync.jsonl
+python -m minutemosaic actions   ../../examples/product-sync.jsonl
+python -m minutemosaic report ../../examples/product-sync.jsonl \
