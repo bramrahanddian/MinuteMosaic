@@ -17,3 +17,5 @@ python -m minutemosaic segments  ../../examples/product-sync.jsonl
 python -m minutemosaic decisions ../../examples/product-sync.jsonl
 python -m minutemosaic actions   ../../examples/product-sync.jsonl
 python -m minutemosaic report ../../examples/product-sync.jsonl \
+    --title "Product Sync" --html /tmp/report.html --json /tmp/report.json
+```
