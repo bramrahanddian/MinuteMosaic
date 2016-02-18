@@ -21,3 +21,6 @@ python -m minutemosaic report ../../examples/product-sync.jsonl \
 ```
 
 - **Swift (optional)** — the local timeline model builds where a toolchain is
+  available: `swift build` and `swift run mm-timeline <report.json>`.
+
+## Before you open a pull request
