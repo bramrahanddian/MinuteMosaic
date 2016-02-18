@@ -24,3 +24,5 @@ python -m minutemosaic report ../../examples/product-sync.jsonl \
   available: `swift build` and `swift run mm-timeline <report.json>`.
 
 ## Before you open a pull request
+
+1. `python -m compileall -q python/src/minutemosaic` passes.
