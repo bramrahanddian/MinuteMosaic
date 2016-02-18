@@ -19,3 +19,5 @@ python -m minutemosaic actions   ../../examples/product-sync.jsonl
 python -m minutemosaic report ../../examples/product-sync.jsonl \
     --title "Product Sync" --html /tmp/report.html --json /tmp/report.json
 ```
+
+- **Swift (optional)** — the local timeline model builds where a toolchain is
