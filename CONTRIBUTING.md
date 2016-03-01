@@ -26,3 +26,5 @@ python -m minutemosaic report ../../examples/product-sync.jsonl \
 ## Before you open a pull request
 
 1. `python -m compileall -q python/src/minutemosaic` passes.
+2. The CLI runs clean against `examples/product-sync.jsonl`.
+3. Every new extraction rule is readable, documented in the rule table in
