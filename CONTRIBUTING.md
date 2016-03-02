@@ -28,3 +28,5 @@ python -m minutemosaic report ../../examples/product-sync.jsonl \
 1. `python -m compileall -q python/src/minutemosaic` passes.
 2. The CLI runs clean against `examples/product-sync.jsonl`.
 3. Every new extraction rule is readable, documented in the rule table in
+   `docs/heuristics.md`, and keeps provenance (rule id + trigger + source spans).
+4. Keep the Python package dependency-free and offline.
