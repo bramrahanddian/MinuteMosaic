@@ -9,3 +9,7 @@ PYSRC = python/src
 
 .PHONY: help
 help:
+	@echo "Targets:"
+	@echo "  make report      - build HTML + JSON report from the example transcript"
+	@echo "  make decisions   - print detected decisions with provenance"
+	@echo "  make actions     - print detected action items with provenance"
