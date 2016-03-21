@@ -13,3 +13,6 @@ help:
 	@echo "  make report      - build HTML + JSON report from the example transcript"
 	@echo "  make decisions   - print detected decisions with provenance"
 	@echo "  make actions     - print detected action items with provenance"
+	@echo "  make segments    - print detected topic segments"
+	@echo "  make compile-py  - byte-compile all Python sources (syntax check)"
+	@echo "  make swift-build  - build the Swift package (needs a Swift toolchain)"
