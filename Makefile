@@ -16,3 +16,6 @@ help:
 	@echo "  make segments    - print detected topic segments"
 	@echo "  make compile-py  - byte-compile all Python sources (syntax check)"
 	@echo "  make swift-build  - build the Swift package (needs a Swift toolchain)"
+	@echo "  make swift-timeline - render the timeline from the example report JSON"
+	@echo "  make clean        - remove generated artifacts"
+
