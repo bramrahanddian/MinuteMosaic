@@ -22,3 +22,7 @@ help:
 .PHONY: report
 report:
 	cd $(PYSRC) && $(PYTHON) -m minutemosaic report ../../$(EXAMPLE) \
+		--title "Product Sync" --html ../../$(OUT_HTML) --json ../../$(OUT_JSON)
+
+.PHONY: decisions
+decisions:
