@@ -29,3 +29,6 @@ decisions:
 	cd $(PYSRC) && $(PYTHON) -m minutemosaic decisions ../../$(EXAMPLE)
 
 .PHONY: actions
+actions:
+	cd $(PYSRC) && $(PYTHON) -m minutemosaic actions ../../$(EXAMPLE)
+
