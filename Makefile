@@ -19,3 +19,6 @@ help:
 	@echo "  make swift-timeline - render the timeline from the example report JSON"
 	@echo "  make clean        - remove generated artifacts"
 
+.PHONY: report
+report:
+	cd $(PYSRC) && $(PYTHON) -m minutemosaic report ../../$(EXAMPLE) \
