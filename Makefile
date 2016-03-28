@@ -35,3 +35,6 @@ actions:
 .PHONY: segments
 segments:
 	cd $(PYSRC) && $(PYTHON) -m minutemosaic segments ../../$(EXAMPLE)
+
+.PHONY: compile-py
+compile-py:
