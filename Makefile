@@ -38,3 +38,7 @@ segments:
 
 .PHONY: compile-py
 compile-py:
+	$(PYTHON) -m compileall -q $(PYSRC)/minutemosaic
+
+.PHONY: swift-build
+swift-build:
