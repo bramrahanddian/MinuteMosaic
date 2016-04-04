@@ -42,3 +42,6 @@ compile-py:
 
 .PHONY: swift-build
 swift-build:
+	swift build
+
+.PHONY: swift-timeline
