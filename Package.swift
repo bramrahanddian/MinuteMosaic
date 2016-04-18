@@ -5,3 +5,4 @@ let package = Package(
     name: "MinuteMosaic",
     platforms: [
         .macOS(.v12),
+        .iOS(.v15),
