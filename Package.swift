@@ -14,3 +14,5 @@ let package = Package(
     targets: [
         .target(
             name: "MinuteMosaic",
+            path: "Sources/MinuteMosaic"
+        ),
