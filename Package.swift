@@ -11,3 +11,5 @@ let package = Package(
         .library(name: "MinuteMosaic", targets: ["MinuteMosaic"]),
         .executable(name: "mm-timeline", targets: ["mm-timeline"]),
     ],
+    targets: [
+        .target(
