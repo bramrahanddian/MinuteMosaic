@@ -16,3 +16,4 @@ let package = Package(
             name: "MinuteMosaic",
             path: "Sources/MinuteMosaic"
         ),
+        .executableTarget(
