@@ -8,3 +8,4 @@ let package = Package(
         .iOS(.v15),
     ],
     products: [
+        .library(name: "MinuteMosaic", targets: ["MinuteMosaic"]),
