@@ -17,3 +17,5 @@ let package = Package(
             path: "Sources/MinuteMosaic"
         ),
         .executableTarget(
+            name: "mm-timeline",
+            dependencies: ["MinuteMosaic"],
