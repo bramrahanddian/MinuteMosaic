@@ -53,3 +53,14 @@ it. No summary you have to take on faith.
 ---
 
 ## 🔊 Why "audio timeline" if there's no audio?
+
+Because the *timeline* is the instrument, not the microphone. A meeting has a
+rhythm — bursts of debate, long silences, a single decisive sentence. MinuteMosaic
+lays that rhythm out horizontally like an audio scrubber and tints each utterance
+by its topic, so the **shape** of the conversation is visible at a glance:
+
+```
+   loud debate        silence          one clean decision           follow-ups
+   ▁▂▅▇█▇▅▂▁▂▅▇▂▁      ·  ·  ·  ·       ▁▂▃  ██  ▃▂▁                 ▂▄▂▄▂▄▂
+   └── topic: onboarding ──┘           └ "let's go with Friday" ┘   └ actions ┘
+```
