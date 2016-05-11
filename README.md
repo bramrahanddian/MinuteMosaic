@@ -30,3 +30,14 @@ it came from.** Click any decision and you land on the exact utterance that said
 it. No summary you have to take on faith.
 
 > **Honesty first.** MinuteMosaic does **not** transcribe audio and has **no**
+> remote service. It consumes a transcript you already have and derives structure
+> with rules you can read in an afternoon. The waveform in the diagrams is the
+> *rhythm of a transcript*, not a claim that we run speech recognition.
+
+---
+
+## 🎨 The mosaic, pane by pane
+
+| Pane | What it is | Where the glass comes from |
+|------|-----------|----------------------------|
+| 🟥 **Ingest** | JSONL transcript loader (stdlib) | forgiving key spellings, line-numbered errors, never fabricates timing |
