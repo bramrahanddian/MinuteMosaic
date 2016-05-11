@@ -41,3 +41,15 @@ it. No summary you have to take on faith.
 | Pane | What it is | Where the glass comes from |
 |------|-----------|----------------------------|
 | 🟥 **Ingest** | JSONL transcript loader (stdlib) | forgiving key spellings, line-numbered errors, never fabricates timing |
+| 🟧 **Segment** | Deterministic topic boundaries | keyword cohesion + silence gaps |
+| 🟩 **Decide** | Explainable decision extraction | ordered regex rules, bounded confidence |
+| 🟦 **Act** | Action items with owner/due inference | pattern-matched, honestly scored |
+| 🟪 **Provenance** | The lead between every pane | rule id + trigger phrase + source spans |
+| 🟦 **Report** | Self-contained HTML + JSON | offline, no CDN, clickable evidence |
+| 🟥 **Swift timeline** | Local model, privacy, SVG export | retention windows, redaction, pseudonymization |
+
+<img src="docs/assets/provenance.svg" alt="Animated provenance pipeline" width="100%">
+
+---
+
+## 🔊 Why "audio timeline" if there's no audio?
