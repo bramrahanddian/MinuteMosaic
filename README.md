@@ -64,3 +64,14 @@ by its topic, so the **shape** of the conversation is visible at a glance:
    ▁▂▅▇█▇▅▂▁▂▅▇▂▁      ·  ·  ·  ·       ▁▂▃  ██  ▃▂▁                 ▂▄▂▄▂▄▂
    └── topic: onboarding ──┘           └ "let's go with Friday" ┘   └ actions ┘
 ```
+
+The stained-glass panes above the scrubber are the **evidence facets** — one per
+utterance. Hover a facet in the HTML report and you see the raw line; the derived
+claims below link straight back to it.
+
+---
+
+## 🚀 Quickstart (Python, stdlib only)
+
+No dependencies. No virtualenv required. Just Python 3.9+.
+
