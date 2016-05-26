@@ -75,3 +75,14 @@ claims below link straight back to it.
 
 No dependencies. No virtualenv required. Just Python 3.9+.
 
+```bash
+cd python/src
+
+# See the topic mosaic
+python -m minutemosaic segments  ../../examples/product-sync.jsonl
+
+# Decisions, each with its provenance
+python -m minutemosaic decisions ../../examples/product-sync.jsonl
+
+# Action items with inferred owner / due
+python -m minutemosaic actions   ../../examples/product-sync.jsonl
