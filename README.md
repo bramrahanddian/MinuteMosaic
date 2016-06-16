@@ -97,3 +97,14 @@ python -m minutemosaic report ../../examples/product-sync.jsonl \
 Or from the project root with the Makefile:
 
 ```bash
+make segments
+make decisions
+make actions
+make report        # writes examples/product-sync.report.{html,json}
+make compile-py    # byte-compile every source (syntax check)
+```
+
+### What the decisions command prints
+
+```
+D0 (0.77) Ada: Great. Let's go with a Friday cutoff for the release candidate then.
