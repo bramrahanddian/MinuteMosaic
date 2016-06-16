@@ -86,3 +86,14 @@ python -m minutemosaic decisions ../../examples/product-sync.jsonl
 
 # Action items with inferred owner / due
 python -m minutemosaic actions   ../../examples/product-sync.jsonl
+
+# Build the full stained-glass report (HTML + JSON)
+python -m minutemosaic report ../../examples/product-sync.jsonl \
+    --title "Product Sync" \
+    --html ../../examples/product-sync.report.html \
+    --json ../../examples/product-sync.report.json
+```
+
+Or from the project root with the Makefile:
+
+```bash
