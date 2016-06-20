@@ -108,3 +108,15 @@ make compile-py    # byte-compile every source (syntax check)
 
 ```
 D0 (0.77) Ada: Great. Let's go with a Friday cutoff for the release candidate then.
+    rule=decide.agree trigger='Let's go with' evidence=#3
+D2 (0.95) Mei: We decided last sprint to go with the three-tier layout, so I'll finalize the copy.
+    rule=decide.explicit trigger='We decided' evidence=#6
+```
+
+Every line tells you **which rule fired**, **on what phrase**, and **which source
+utterance** backs it. That's the lead holding the glass.
+
+---
+
+## 🍎 Swift: the local evidence timeline
+
