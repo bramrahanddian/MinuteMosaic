@@ -120,3 +120,14 @@ utterance** backs it. That's the lead holding the glass.
 
 ## 🍎 Swift: the local evidence timeline
 
+The Swift package (`Package.swift`, `Sources/MinuteMosaic`) is a **local model**
+of the same world — transcript, events, provenance — plus:
+
+- **`PrivacySettings` / `RetentionEngine`** — keep meetings forever or for *N*
+  days; on export, optionally redact transcript text (length-preserving mask)
+  and pseudonymize speakers.
+- **`TimelineRenderer`** — lay out stained-glass facets, render the evidence
+  timeline as text, and export a self-contained **SVG** — all with zero UI
+  framework so it builds headless in CI.
+- **`mm-timeline`** — a tiny executable that reads the Python report JSON and
+  prints/exports the timeline.
