@@ -131,3 +131,14 @@ of the same world — transcript, events, provenance — plus:
   framework so it builds headless in CI.
 - **`mm-timeline`** — a tiny executable that reads the Python report JSON and
   prints/exports the timeline.
+
+```bash
+# Requires a Swift toolchain (CI builds this on macOS)
+swift build
+swift run mm-timeline examples/product-sync.report.json --svg examples/timeline.export.svg
+swift run mm-timeline examples/product-sync.report.json --share-safe   # redacted + pseudonymized
+```
+
+> **Local build note:** this project's Python side was compiled and run locally
+> against the bundled example. A Swift toolchain was **not** available in the
+> authoring environment, so the Swift package is compiled by **CI** (see
