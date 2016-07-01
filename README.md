@@ -142,3 +142,14 @@ swift run mm-timeline examples/product-sync.report.json --share-safe   # redacte
 > **Local build note:** this project's Python side was compiled and run locally
 > against the bundled example. A Swift toolchain was **not** available in the
 > authoring environment, so the Swift package is compiled by **CI** (see
+> `.github/workflows/ci.yml`, `swift build` on macOS). The sources are written to
+> that expectation.
+
+---
+
+## 🧩 How a claim becomes a pane
+
+```
+   transcript line ──▶ heuristic rule ──▶ claim ──▶ provenance
+        #3                decide.agree      Decision   rule=decide.agree
+   "Let's go with…"       "Let's go with"   conf 0.77  trigger='Let's go with'
