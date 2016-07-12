@@ -164,3 +164,14 @@ an afterthought. Read the full rule table in
 [`docs/heuristics.md`](docs/heuristics.md).
 
 ---
+
+## 📐 Design principles
+
+1. **Provenance or it didn't happen.** A claim with no source spans is a bug.
+2. **Deterministic.** Same transcript in → same mosaic out, every run.
+3. **Readable rules.** If you can't predict the output by reading the code, the
+   rule is too clever.
+4. **Local-first, always.** No network, no accounts, no telemetry.
+5. **Honest scope.** No audio processing. No fabricated timestamps. No claims of
+   certainty the heuristics can't justify (confidence is clipped to 0.05–0.99).
+
