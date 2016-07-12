@@ -175,3 +175,15 @@ an afterthought. Read the full rule table in
 5. **Honest scope.** No audio processing. No fabricated timestamps. No claims of
    certainty the heuristics can't justify (confidence is clipped to 0.05–0.99).
 
+---
+
+## 📁 Layout
+
+```
+minutemosaic/
+├── python/src/minutemosaic/     # stdlib-only CLI + library
+│   ├── ingest.py                #   JSONL → Utterances (forgiving, strict on timing)
+│   ├── segment.py               #   deterministic topic boundaries
+│   ├── extract.py               #   explainable decision/action rules + provenance
+│   ├── report.py                #   assemble MeetingReport
+│   ├── render.py                #   self-contained HTML + JSON
