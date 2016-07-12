@@ -209,3 +209,14 @@ One JSON object per line. Times in seconds from start. Full spec in
 {"start": 0.0, "end": 4.2, "speaker": "Ada",  "text": "Let's start with the release timeline."}
 {"start": 4.5, "end": 9.1, "speaker": "Ravi", "text": "Build is green but onboarding has two blocking bugs."}
 ```
+
+---
+
+## 🗺️ Status
+
+Four milestones are honestly **done** — ingestion, explainable structure,
+provenance + reports, and the local Swift model with privacy/export. Things that
+are deliberately **not** built (transcription, cloud sync, ML models, automated
+tests) are listed just as plainly in [`ROADMAP.md`](ROADMAP.md). We would rather
+under-promise the glass than paint light that isn't there.
+
