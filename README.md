@@ -187,3 +187,14 @@ minutemosaic/
 │   ├── extract.py               #   explainable decision/action rules + provenance
 │   ├── report.py                #   assemble MeetingReport
 │   ├── render.py                #   self-contained HTML + JSON
+│   └── cli.py                   #   `minutemosaic` command
+├── Sources/
+│   ├── MinuteMosaic/            # Swift local model, privacy, timeline renderer
+│   └── mm-timeline/             # Swift executable
+├── examples/product-sync.jsonl  # a short, hand-authored meeting
+├── docs/                        # heuristics, transcript format, animated SVGs
+├── Package.swift · pyproject.toml · Makefile
+├── .github/workflows/ci.yml     # Python compile+smoke, Swift build
+├── ROADMAP.md · CHANGELOG.md · LICENSE
+```
+
