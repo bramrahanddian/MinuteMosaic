@@ -153,3 +153,14 @@ swift run mm-timeline examples/product-sync.report.json --share-safe   # redacte
    transcript line ──▶ heuristic rule ──▶ claim ──▶ provenance
         #3                decide.agree      Decision   rule=decide.agree
    "Let's go with…"       "Let's go with"   conf 0.77  trigger='Let's go with'
+                                                       evidence=[#3]
+        ▲                                                   │
+        └───────────────── audit trail ─────────────────────┘
+```
+
+You can walk it forwards (line → claim) or backwards (claim → line). Both
+directions are always available because provenance is a first-class field, not
+an afterthought. Read the full rule table in
+[`docs/heuristics.md`](docs/heuristics.md).
+
+---
