@@ -220,3 +220,14 @@ are deliberately **not** built (transcription, cloud sync, ML models, automated
 tests) are listed just as plainly in [`ROADMAP.md`](ROADMAP.md). We would rather
 under-promise the glass than paint light that isn't there.
 
+---
+
+## 📜 License
+
+MIT — see [`LICENSE`](LICENSE). Assemble your own windows.
+
+---
+
+## 🔍 A worked example: following the lead
+
+Take utterance `#8` from the bundled transcript:
