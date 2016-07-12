@@ -198,3 +198,14 @@ minutemosaic/
 ├── ROADMAP.md · CHANGELOG.md · LICENSE
 ```
 
+---
+
+## 📊 Transcript format (the raw light)
+
+One JSON object per line. Times in seconds from start. Full spec in
+[`docs/transcript-format.md`](docs/transcript-format.md).
+
+```json
+{"start": 0.0, "end": 4.2, "speaker": "Ada",  "text": "Let's start with the release timeline."}
+{"start": 4.5, "end": 9.1, "speaker": "Ravi", "text": "Build is green but onboarding has two blocking bugs."}
+```
