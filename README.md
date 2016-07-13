@@ -242,3 +242,15 @@ Here is exactly what MinuteMosaic does with it, step by step, all reproducible:
    and records the speaker `Mei`. Nothing is guessed.
 2. **Segment** places it in a topic whose keywords are `send / mockups /
    marketing` — the pricing-copy thread, not onboarding.
+3. **Extract** runs the action rules top-down. `action.assign` matches the
+   phrase `mockups to marketing by Thursday.`
+4. **Owner inference** sees `I'll` and attributes the action to the current
+   speaker, `Mei` (bonus `+0.12`).
+5. **Due inference** sees `by Thursday` and captures `Thursday` (bonus `+0.10`).
+6. **Confidence** = clip(0.70 base + 0.12 + 0.10) = **0.92**.
+7. **Provenance** is stamped: `rule=action.assign`,
+   `trigger='mockups to marketing by Thursday.'`, `utterance_indices=[8]`,
+   with a note recording the inferred owner and due.
+
+The JSON report carries all of that so any downstream tool — including the Swift
+`mm-timeline` — can re-verify the claim against the source. No pane floats free.
