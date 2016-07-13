@@ -231,3 +231,14 @@ MIT — see [`LICENSE`](LICENSE). Assemble your own windows.
 ## 🔍 A worked example: following the lead
 
 Take utterance `#8` from the bundled transcript:
+
+```json
+{"start": 51.3, "end": 55.8, "speaker": "Mei", "text": "Sure, I'll send the mockups to marketing by Thursday."}
+```
+
+Here is exactly what MinuteMosaic does with it, step by step, all reproducible:
+
+1. **Ingest** assigns it `index = 8`, keeps its timing verbatim (`51.3 → 55.8`),
+   and records the speaker `Mei`. Nothing is guessed.
+2. **Segment** places it in a topic whose keywords are `send / mockups /
+   marketing` — the pricing-copy thread, not onboarding.
