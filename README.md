@@ -265,3 +265,14 @@ then only when you deliberately export.
 | Setting | Default | Effect |
 |---------|---------|--------|
 | `retention` | `.forever` | `.days(N)` marks older meetings expired for pruning |
+| `redactTranscriptOnExport` | `false` | replaces text with a length-preserving `•` mask so the *shape* survives, the *content* does not |
+| `pseudonymizeSpeakers` | `false` | remaps real names to stable `Speaker A/B/…` aliases |
+
+A ready-made preset ships for the common "share the shape, not the words" case:
+
+```swift
+let settings = PrivacySettings.shareSafe   // .days(30) + redact + pseudonymize
+let json = try TimelineRenderer.exportJSON(meeting, settings: settings)
+```
+
+`RetentionEngine.isExpired(recordedAt:settings:now:)` is a pure function you can
