@@ -254,3 +254,14 @@ Here is exactly what MinuteMosaic does with it, step by step, all reproducible:
 
 The JSON report carries all of that so any downstream tool — including the Swift
 `mm-timeline` — can re-verify the claim against the source. No pane floats free.
+
+---
+
+## 🔐 Privacy & retention (Swift side)
+
+Because everything is local, *you* decide what leaves your machine — and even
+then only when you deliberately export.
+
+| Setting | Default | Effect |
+|---------|---------|--------|
+| `retention` | `.forever` | `.days(N)` marks older meetings expired for pruning |
