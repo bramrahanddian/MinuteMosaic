@@ -276,3 +276,14 @@ let json = try TimelineRenderer.exportJSON(meeting, settings: settings)
 ```
 
 `RetentionEngine.isExpired(recordedAt:settings:now:)` is a pure function you can
+call from a background prune task. There is no hidden retention — if a meeting is
+on disk, it is because your policy kept it there.
+
+---
+
+## ❓ FAQ
+
+**Does this transcribe my audio / join my meeting?**
+No. It never touches audio and never joins anything. You feed it a transcript
+that already exists. The waveform artwork represents a transcript's rhythm.
+
