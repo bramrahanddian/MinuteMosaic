@@ -5,3 +5,4 @@ The four checked milestones are shipped. The project intentionally makes no tran
 ## Completed foundation
 - [x] **M1 — Faithful transcript ingestion.** JSONL loader preserves timing and reports line-numbered errors.
 - [x] **M2 — Explainable structure.** Deterministic topic segmentation and rule-based decision/action extraction.
+- [x] **M3 — Evidence-linked reports.** Every claim points to source utterances in offline HTML and JSON.
