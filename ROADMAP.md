@@ -8,3 +8,5 @@ The four checked milestones are shipped. The project intentionally makes no tran
 - [x] **M3 — Evidence-linked reports.** Every claim points to source utterances in offline HTML and JSON.
 - [x] **M4 — Swift local model.** Privacy settings, retention/redaction controls, timeline model, and text/SVG export.
 
+## Planned / explicitly not implemented
+- [ ] Optional, isolated local ASR integration.
