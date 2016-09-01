@@ -10,3 +10,4 @@ The four checked milestones are shipped. The project intentionally makes no tran
 
 ## Planned / explicitly not implemented
 - [ ] Optional, isolated local ASR integration.
+- [ ] Automated test suites.
