@@ -9,3 +9,4 @@
 
 ## Reporting a vulnerability
 
+MinuteMosaic processes files you give it locally. The Python side is stdlib-only,
