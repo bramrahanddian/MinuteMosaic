@@ -14,3 +14,4 @@ makes no network calls, and never executes anything it reads; the Swift side is
 a local model and renderer. If you find a security issue — a crash or resource
 exhaustion on hostile input, a path traversal, or a report that leaks transcript
 content beyond the line it flags — please report it privately with GitHub's
+"Report a vulnerability" button on the Security tab.
