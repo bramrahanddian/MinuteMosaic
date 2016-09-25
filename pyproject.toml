@@ -11,3 +11,5 @@ requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [{ name = "MinuteMosaic contributors" }]
 keywords = ["meeting", "transcript", "provenance", "local-first", "decisions", "action-items"]
+classifiers = [
+  "Development Status :: 4 - Beta",
