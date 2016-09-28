@@ -13,3 +13,5 @@ authors = [{ name = "MinuteMosaic contributors" }]
 keywords = ["meeting", "transcript", "provenance", "local-first", "decisions", "action-items"]
 classifiers = [
   "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
