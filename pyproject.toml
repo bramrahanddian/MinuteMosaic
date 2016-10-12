@@ -22,3 +22,5 @@ classifiers = [
   "Topic :: Office/Business",
 ]
 # Deliberately zero runtime dependencies: stdlib only. Local-first, offline, auditable.
+dependencies = []
+
