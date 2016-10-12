@@ -20,3 +20,5 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Topic :: Text Processing :: Linguistic",
   "Topic :: Office/Business",
+]
+# Deliberately zero runtime dependencies: stdlib only. Local-first, offline, auditable.
