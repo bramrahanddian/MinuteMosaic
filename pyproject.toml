@@ -24,3 +24,6 @@ classifiers = [
 # Deliberately zero runtime dependencies: stdlib only. Local-first, offline, auditable.
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/bramrahanddian/MinuteMosaic"
+Source = "https://github.com/bramrahanddian/MinuteMosaic"
