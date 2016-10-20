@@ -27,3 +27,5 @@ dependencies = []
 [project.urls]
 Homepage = "https://github.com/bramrahanddian/MinuteMosaic"
 Source = "https://github.com/bramrahanddian/MinuteMosaic"
+Changelog = "https://github.com/bramrahanddian/MinuteMosaic/blob/main/CHANGELOG.md"
+
