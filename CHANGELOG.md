@@ -70,3 +70,17 @@ its scope: it does **not** transcribe audio and has **no** remote service.
   strongest-first, base confidence per rule.
 
 ## [0.2.0] — 2017-03-21
+
+### Added
+- Deterministic topic segmentation via keyword cohesion with a silence-gap
+  override; each segment labelled from its top keywords.
+
+## [0.1.0] — 2015-07-14
+
+### Added
+- JSONL transcript ingestion, stdlib only: forgiving key spellings, line-numbered
+  errors, timing preserved verbatim.
+- Core data model (`Utterance`, `Segment`, `MeetingReport`) and JSON report
+  output.
+
+<!-- draft note 1 -->
