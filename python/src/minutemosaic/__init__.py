@@ -2,3 +2,4 @@
 
 This package is deliberately stdlib-only. It performs *no* audio processing and
 makes *no* transcription claims: it consumes an already-produced timestamped
+speaker transcript (JSONL) and derives structure (topics, decisions, action
