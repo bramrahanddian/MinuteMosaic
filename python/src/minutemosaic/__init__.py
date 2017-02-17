@@ -6,3 +6,4 @@ speaker transcript (JSONL) and derives structure (topics, decisions, action
 items) using deterministic, explainable heuristics. Every derived claim carries
 a provenance trail back to the exact source spans that triggered it.
 """
+
