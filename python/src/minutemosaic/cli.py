@@ -22,3 +22,13 @@ from .ingest import TranscriptError, load_file
 from .render import render_html, render_json
 from .report import build_report
 
+
+def _add_common(p: argparse.ArgumentParser) -> None:
+    p.add_argument("transcript", help="path to a timestamped speaker transcript (JSONL)")
+    p.add_argument("--title", default="Meeting", help="report title")
+    p.add_argument(
+        "--cohesion",
+        type=float,
+        default=0.12,
+        help="topic cohesion threshold; lower = fewer, broader topics",
+    )
