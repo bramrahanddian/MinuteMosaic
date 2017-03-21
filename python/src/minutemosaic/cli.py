@@ -41,3 +41,13 @@ def _add_common(p: argparse.ArgumentParser) -> None:
 
 
 def _build(args) -> "object":
+    utterances = load_file(args.transcript)
+    return build_report(
+        utterances,
+        title=args.title,
+        source=args.transcript,
+        cohesion_threshold=args.cohesion,
+        silence_gap=args.silence_gap,
+    )
+
+
