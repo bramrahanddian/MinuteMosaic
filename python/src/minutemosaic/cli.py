@@ -32,3 +32,12 @@ def _add_common(p: argparse.ArgumentParser) -> None:
         default=0.12,
         help="topic cohesion threshold; lower = fewer, broader topics",
     )
+    p.add_argument(
+        "--silence-gap",
+        type=float,
+        default=8.0,
+        help="silence (seconds) that forces a topic boundary",
+    )
+
+
+def _build(args) -> "object":
