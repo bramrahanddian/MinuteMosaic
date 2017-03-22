@@ -51,3 +51,12 @@ def _build(args) -> "object":
     )
 
 
+def _cmd_report(args) -> int:
+    report = _build(args)
+    wrote = False
+    if args.json:
+        with open(args.json, "w", encoding="utf-8") as fh:
+            fh.write(render_json(report))
+        print(f"wrote JSON report  -> {args.json}")
+        wrote = True
+    if args.html:
