@@ -60,3 +60,13 @@ def _cmd_report(args) -> int:
         print(f"wrote JSON report  -> {args.json}")
         wrote = True
     if args.html:
+        with open(args.html, "w", encoding="utf-8") as fh:
+            fh.write(render_html(report))
+        print(f"wrote HTML report  -> {args.html}")
+        wrote = True
+    if not wrote:
+        # Default: JSON to stdout.
+        print(render_json(report))
+    return 0
+
+
