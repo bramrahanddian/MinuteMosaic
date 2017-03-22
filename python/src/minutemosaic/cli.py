@@ -70,3 +70,12 @@ def _cmd_report(args) -> int:
     return 0
 
 
+def _cmd_segments(args) -> int:
+    report = _build(args)
+    for s in report.segments:
+        print(
+            f"[{s.segment_id}] {s.start_time:6.1f}-{s.end_time:6.1f}  "
+            f"{s.label}  ({', '.join(s.speakers)})"
+        )
+    return 0
+
