@@ -108,3 +108,12 @@ def _cmd_actions(args) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="minutemosaic",
+        description="Local-first meeting intelligence with evidence provenance (stdlib only).",
+    )
+    parser.add_argument("--version", action="version", version=f"minutemosaic {__version__}")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    p_report = sub.add_parser("report", help="build a full report (JSON and/or HTML)")
+    _add_common(p_report)
+    p_report.add_argument("--html", help="write a self-contained HTML report to this path")
+    p_report.add_argument("--json", help="write a JSON report to this path")
