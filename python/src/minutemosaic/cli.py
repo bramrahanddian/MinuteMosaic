@@ -79,3 +79,13 @@ def _cmd_segments(args) -> int:
         )
     return 0
 
+
+def _cmd_decisions(args) -> int:
+    report = _build(args)
+    if not report.decisions:
+        print("(no decisions detected)")
+    for dec in report.decisions:
+        ev = ",".join(f"#{i}" for i in dec.provenance.utterance_indices)
+        print(f"D{dec.decision_id} ({dec.confidence:.2f}) {dec.speaker}: {dec.text}")
+        print(f"    rule={dec.provenance.rule_id} trigger='{dec.provenance.trigger.strip()}' evidence={ev}")
+    return 0
