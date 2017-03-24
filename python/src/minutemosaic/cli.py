@@ -98,3 +98,13 @@ def _cmd_actions(args) -> int:
     for act in report.actions:
         ev = ",".join(f"#{i}" for i in act.provenance.utterance_indices)
         print(
+            f"A{act.action_id} ({act.confidence:.2f}) owner={act.owner or '-'} "
+            f"due={act.due_hint or '-'}: {act.text}"
+        )
+        print(f"    rule={act.provenance.rule_id} trigger='{act.provenance.trigger.strip()}' evidence={ev}")
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="minutemosaic",
