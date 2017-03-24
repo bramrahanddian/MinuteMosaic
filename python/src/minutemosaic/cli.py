@@ -117,3 +117,13 @@ def build_parser() -> argparse.ArgumentParser:
     _add_common(p_report)
     p_report.add_argument("--html", help="write a self-contained HTML report to this path")
     p_report.add_argument("--json", help="write a JSON report to this path")
+    p_report.set_defaults(func=_cmd_report)
+
+    p_seg = sub.add_parser("segments", help="print detected topic segments")
+    _add_common(p_seg)
+    p_seg.set_defaults(func=_cmd_segments)
+
+    p_dec = sub.add_parser("decisions", help="print detected decisions with provenance")
+    _add_common(p_dec)
+    p_dec.set_defaults(func=_cmd_decisions)
+
