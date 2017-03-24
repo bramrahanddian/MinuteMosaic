@@ -89,3 +89,12 @@ def _cmd_decisions(args) -> int:
         print(f"D{dec.decision_id} ({dec.confidence:.2f}) {dec.speaker}: {dec.text}")
         print(f"    rule={dec.provenance.rule_id} trigger='{dec.provenance.trigger.strip()}' evidence={ev}")
     return 0
+
+
+def _cmd_actions(args) -> int:
+    report = _build(args)
+    if not report.actions:
+        print("(no action items detected)")
+    for act in report.actions:
+        ev = ",".join(f"#{i}" for i in act.provenance.utterance_indices)
+        print(
