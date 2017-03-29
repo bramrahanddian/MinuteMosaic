@@ -11,3 +11,12 @@ You can read every rule below and predict the output. That is the point.
 from __future__ import annotations
 
 import re
+from typing import List, Optional
+
+from .model import ActionItem, Decision, Provenance, Utterance
+
+# --- Decision triggers -----------------------------------------------------
+# Ordered strongest-first. Each entry: (rule_id, compiled regex, base_confidence)
+_DECISION_RULES = [
+    ("decide.explicit", re.compile(r"\b(we (?:have )?decided|decision is|it's decided|we'll go with|we will go with)\b", re.I), 0.9),
+    ("decide.agree", re.compile(r"\b(let's|lets|we should|we'll|we will)\s+(go with|ship|adopt|use|pick|choose|proceed with)\b", re.I), 0.72),
