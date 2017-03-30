@@ -38,3 +38,11 @@ _DUE_RE = re.compile(
 )
 
 
+def _clip_confidence(base: float, bonuses: float) -> float:
+    return round(min(0.99, max(0.05, base + bonuses)), 2)
+
+
+def extract_decisions(utterances: List[Utterance], segment_of) -> List[Decision]:
+    out: List[Decision] = []
+    dec_id = 0
+    for u in utterances:
