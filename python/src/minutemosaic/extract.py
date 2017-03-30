@@ -20,3 +20,12 @@ from .model import ActionItem, Decision, Provenance, Utterance
 _DECISION_RULES = [
     ("decide.explicit", re.compile(r"\b(we (?:have )?decided|decision is|it's decided|we'll go with|we will go with)\b", re.I), 0.9),
     ("decide.agree", re.compile(r"\b(let's|lets|we should|we'll|we will)\s+(go with|ship|adopt|use|pick|choose|proceed with)\b", re.I), 0.72),
+    ("decide.consensus", re.compile(r"\b(agreed|sounds good|works for me|approved|sign(?:ed)? off|greenlight)\b", re.I), 0.6),
+    ("decide.final", re.compile(r"\b(final(?:ized|ised)?|locked in|settled)\b", re.I), 0.55),
+]
+
+# --- Action triggers -------------------------------------------------------
+_ACTION_RULES = [
+    ("action.assign", re.compile(r"\b(\w+) (?:will|to|is going to|'ll)\s+(\w+[\w\s]{2,40}?)(?:\bby\b|[.?!]|$)", re.I), 0.7),
+    ("action.imperative", re.compile(r"\b(please |can you |could you |let's |we need to |need to |todo:?\s*)\b", re.I), 0.62),
+    ("action.followup", re.compile(r"\b(follow up|follow-up|action item|take that offline|circle back|send (?:the|an|a)?)\b", re.I), 0.58),
