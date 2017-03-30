@@ -29,3 +29,12 @@ _ACTION_RULES = [
     ("action.assign", re.compile(r"\b(\w+) (?:will|to|is going to|'ll)\s+(\w+[\w\s]{2,40}?)(?:\bby\b|[.?!]|$)", re.I), 0.7),
     ("action.imperative", re.compile(r"\b(please |can you |could you |let's |we need to |need to |todo:?\s*)\b", re.I), 0.62),
     ("action.followup", re.compile(r"\b(follow up|follow-up|action item|take that offline|circle back|send (?:the|an|a)?)\b", re.I), 0.58),
+]
+
+_OWNER_RE = re.compile(r"\b([A-Z][a-z]+)\s+(?:will|to|is going to|'ll|should|can)\b")
+_DUE_RE = re.compile(
+    r"\bby\s+(next week|end of (?:day|week|month)|eod|eow|tomorrow|monday|tuesday|wednesday|thursday|friday|saturday|sunday|[A-Z][a-z]+ \d{1,2}|\d{1,2}(?:st|nd|rd|th)?)\b",
+    re.I,
+)
+
+
