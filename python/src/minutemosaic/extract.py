@@ -55,3 +55,12 @@ def extract_decisions(utterances: List[Utterance], segment_of) -> List[Decision]
             if u.text.strip().endswith((".", "!")):
                 bonus += 0.03
             if len(u.text.split()) >= 5:
+                bonus += 0.02
+            conf = _clip_confidence(base, bonus)
+            prov = Provenance(
+                rule_id=rule_id,
+                trigger=m.group(0),
+                utterance_indices=[u.index],
+                note=f"matched decision cue '{m.group(0).strip()}' by {u.speaker}",
+            )
+            out.append(
