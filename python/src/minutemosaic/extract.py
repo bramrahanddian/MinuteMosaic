@@ -46,3 +46,12 @@ def extract_decisions(utterances: List[Utterance], segment_of) -> List[Decision]
     out: List[Decision] = []
     dec_id = 0
     for u in utterances:
+        for rule_id, pattern, base in _DECISION_RULES:
+            m = pattern.search(u.text)
+            if not m:
+                continue
+            bonus = 0.0
+            # A decision stated as a full sentence is a touch stronger.
+            if u.text.strip().endswith((".", "!")):
+                bonus += 0.03
+            if len(u.text.split()) >= 5:
