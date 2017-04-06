@@ -64,3 +64,12 @@ def extract_decisions(utterances: List[Utterance], segment_of) -> List[Decision]
                 note=f"matched decision cue '{m.group(0).strip()}' by {u.speaker}",
             )
             out.append(
+                Decision(
+                    decision_id=dec_id,
+                    text=u.text,
+                    speaker=u.speaker,
+                    time=u.start,
+                    segment_id=segment_of(u.index),
+                    confidence=conf,
+                    provenance=prov,
+                )
