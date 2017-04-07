@@ -73,3 +73,12 @@ def extract_decisions(utterances: List[Utterance], segment_of) -> List[Decision]
                     confidence=conf,
                     provenance=prov,
                 )
+            )
+            dec_id += 1
+            break  # one decision claim per utterance (strongest rule wins)
+    return out
+
+
+def _guess_owner(text: str, speaker: str) -> Optional[str]:
+    m = _OWNER_RE.search(text)
+    if m:
