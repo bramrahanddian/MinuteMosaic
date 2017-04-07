@@ -90,3 +90,12 @@ def _guess_owner(text: str, speaker: str) -> Optional[str]:
 
 
 def _guess_due(text: str) -> Optional[str]:
+    m = _DUE_RE.search(text)
+    return m.group(1) if m else None
+
+
+def extract_actions(utterances: List[Utterance], segment_of) -> List[ActionItem]:
+    out: List[ActionItem] = []
+    act_id = 0
+    for u in utterances:
+        for rule_id, pattern, base in _ACTION_RULES:
