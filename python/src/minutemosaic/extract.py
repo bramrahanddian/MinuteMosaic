@@ -82,3 +82,11 @@ def extract_decisions(utterances: List[Utterance], segment_of) -> List[Decision]
 def _guess_owner(text: str, speaker: str) -> Optional[str]:
     m = _OWNER_RE.search(text)
     if m:
+        return m.group(1)
+    # "I'll take that" → attribute to the current speaker.
+    if re.search(r"\bi(?:'| wi)ll\b|\bi will\b|\bi can\b", text, re.I):
+        return speaker
+    return None
+
+
+def _guess_due(text: str) -> Optional[str]:
