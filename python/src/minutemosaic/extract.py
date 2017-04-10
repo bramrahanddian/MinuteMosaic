@@ -99,3 +99,12 @@ def extract_actions(utterances: List[Utterance], segment_of) -> List[ActionItem]
     act_id = 0
     for u in utterances:
         for rule_id, pattern, base in _ACTION_RULES:
+            m = pattern.search(u.text)
+            if not m:
+                continue
+            owner = _guess_owner(u.text, u.speaker)
+            due = _guess_due(u.text)
+            bonus = 0.0
+            if owner:
+                bonus += 0.12
+            if due:
