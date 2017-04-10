@@ -108,3 +108,12 @@ def extract_actions(utterances: List[Utterance], segment_of) -> List[ActionItem]
             if owner:
                 bonus += 0.12
             if due:
+                bonus += 0.1
+            conf = _clip_confidence(base, bonus)
+            note_bits = [f"matched action cue '{m.group(0).strip()}'"]
+            if owner:
+                note_bits.append(f"owner inferred: {owner}")
+            if due:
+                note_bits.append(f"due inferred: {due}")
+            prov = Provenance(
+                rule_id=rule_id,
