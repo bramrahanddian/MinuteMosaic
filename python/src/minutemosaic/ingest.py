@@ -8,3 +8,11 @@ without usable timestamps is rejected with a clear, line-numbered error.
 Example line::
 
     {"start": 12.4, "end": 15.9, "speaker": "Ada", "text": "Let's ship Friday."}
+"""
+
+from __future__ import annotations
+
+import json
+from typing import Iterable, List, Tuple
+
+from .model import Utterance
