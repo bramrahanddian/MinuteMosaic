@@ -24,3 +24,10 @@ class TranscriptError(ValueError):
 
 _START_KEYS = ("start", "start_time", "ts", "t0", "begin")
 _END_KEYS = ("end", "end_time", "t1", "stop")
+_SPEAKER_KEYS = ("speaker", "spk", "who", "name")
+_TEXT_KEYS = ("text", "content", "utterance", "words")
+
+
+def _first(obj: dict, keys: Tuple[str, ...]):
+    for k in keys:
+        if k in obj and obj[k] is not None:
