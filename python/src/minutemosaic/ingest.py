@@ -16,3 +16,11 @@ import json
 from typing import Iterable, List, Tuple
 
 from .model import Utterance
+
+
+class TranscriptError(ValueError):
+    """Raised when a transcript line cannot be parsed into an Utterance."""
+
+
+_START_KEYS = ("start", "start_time", "ts", "t0", "begin")
+_END_KEYS = ("end", "end_time", "t1", "stop")
