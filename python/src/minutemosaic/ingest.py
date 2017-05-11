@@ -47,3 +47,11 @@ def _coerce_time(value, line_no: int, field: str) -> float:
 
 
 def parse_lines(lines: Iterable[str]) -> List[Utterance]:
+    """Parse an iterable of raw JSONL strings into ordered Utterances.
+
+    Blank lines and lines beginning with ``#`` (comments) are skipped so hand
+    authored fixtures stay readable. Indices are assigned in file order.
+    """
+
+    utterances: List[Utterance] = []
+    index = 0
