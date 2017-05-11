@@ -31,3 +31,11 @@ _TEXT_KEYS = ("text", "content", "utterance", "words")
 def _first(obj: dict, keys: Tuple[str, ...]):
     for k in keys:
         if k in obj and obj[k] is not None:
+            return obj[k]
+    return None
+
+
+def _coerce_time(value, line_no: int, field: str) -> float:
+    if isinstance(value, bool):  # bool is an int subclass; reject explicitly
+        raise TranscriptError(f"line {line_no}: {field} must be a number, got bool")
+    try:
