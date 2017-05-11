@@ -39,3 +39,11 @@ def _coerce_time(value, line_no: int, field: str) -> float:
     if isinstance(value, bool):  # bool is an int subclass; reject explicitly
         raise TranscriptError(f"line {line_no}: {field} must be a number, got bool")
     try:
+        return float(value)
+    except (TypeError, ValueError):
+        raise TranscriptError(
+            f"line {line_no}: {field} must be a number, got {value!r}"
+        )
+
+
+def parse_lines(lines: Iterable[str]) -> List[Utterance]:
