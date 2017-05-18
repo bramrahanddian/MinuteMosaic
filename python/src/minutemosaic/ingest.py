@@ -55,3 +55,11 @@ def parse_lines(lines: Iterable[str]) -> List[Utterance]:
 
     utterances: List[Utterance] = []
     index = 0
+    for line_no, raw in enumerate(lines, start=1):
+        stripped = raw.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        try:
+            obj = json.loads(stripped)
+        except json.JSONDecodeError as exc:
+            raise TranscriptError(f"line {line_no}: invalid JSON ({exc.msg})") from exc
