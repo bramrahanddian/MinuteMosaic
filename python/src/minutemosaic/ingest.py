@@ -71,3 +71,10 @@ def parse_lines(lines: Iterable[str]) -> List[Utterance]:
             raise TranscriptError(f"line {line_no}: missing start time")
         start = _coerce_time(start_raw, line_no, "start")
 
+        end_raw = _first(obj, _END_KEYS)
+        end = _coerce_time(end_raw, line_no, "end") if end_raw is not None else start
+
+        speaker = _first(obj, _SPEAKER_KEYS) or "UNKNOWN"
+        text = _first(obj, _TEXT_KEYS)
+        if isinstance(text, list):  # some tools emit word arrays
+            text = " ".join(str(w) for w in text)
