@@ -78,3 +78,11 @@ def parse_lines(lines: Iterable[str]) -> List[Utterance]:
         text = _first(obj, _TEXT_KEYS)
         if isinstance(text, list):  # some tools emit word arrays
             text = " ".join(str(w) for w in text)
+        if text is None:
+            raise TranscriptError(f"line {line_no}: missing text")
+
+        utterances.append(
+            Utterance(
+                index=index,
+                start=start,
+                end=max(start, end),
