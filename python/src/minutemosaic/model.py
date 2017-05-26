@@ -11,3 +11,13 @@ import dataclasses
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
+
+@dataclass(frozen=True)
+class Utterance:
+    """A single timestamped, attributed line of transcript.
+
+    ``index`` is the stable 0-based position within the loaded transcript and is
+    the atomic unit of provenance: every derived claim references one or more
+    utterance indices (its *source spans*).
+    """
+
