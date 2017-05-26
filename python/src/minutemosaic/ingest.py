@@ -63,3 +63,11 @@ def parse_lines(lines: Iterable[str]) -> List[Utterance]:
             obj = json.loads(stripped)
         except json.JSONDecodeError as exc:
             raise TranscriptError(f"line {line_no}: invalid JSON ({exc.msg})") from exc
+        if not isinstance(obj, dict):
+            raise TranscriptError(f"line {line_no}: expected a JSON object")
+
+        start_raw = _first(obj, _START_KEYS)
+        if start_raw is None:
+            raise TranscriptError(f"line {line_no}: missing start time")
+        start = _coerce_time(start_raw, line_no, "start")
+
