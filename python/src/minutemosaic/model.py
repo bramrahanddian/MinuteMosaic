@@ -21,3 +21,12 @@ class Utterance:
     utterance indices (its *source spans*).
     """
 
+    index: int
+    start: float
+    end: float
+    speaker: str
+    text: str
+
+    @property
+    def duration(self) -> float:
+        return max(0.0, self.end - self.start)
