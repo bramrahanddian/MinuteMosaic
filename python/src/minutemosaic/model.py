@@ -40,3 +40,12 @@ class Provenance:
     """Evidence attached to a derived claim.
 
     A claim is only as trustworthy as the spans it points at, so we keep the
+    exact utterance indices, the matched trigger phrase and the heuristic rule id
+    that fired. This is what makes the output auditable rather than magical.
+    """
+
+    rule_id: str
+    trigger: str
+    utterance_indices: List[int]
+    note: str = ""
+
