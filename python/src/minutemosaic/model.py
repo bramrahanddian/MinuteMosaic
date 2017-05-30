@@ -30,3 +30,13 @@ class Utterance:
     @property
     def duration(self) -> float:
         return max(0.0, self.end - self.start)
+
+    def to_dict(self) -> Dict[str, Any]:
+        return dataclasses.asdict(self)
+
+
+@dataclass(frozen=True)
+class Provenance:
+    """Evidence attached to a derived claim.
+
+    A claim is only as trustworthy as the spans it points at, so we keep the
