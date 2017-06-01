@@ -58,3 +58,13 @@ class TopicSegment:
     """A contiguous run of utterances judged to share a topic."""
 
     segment_id: int
+    start_index: int
+    end_index: int  # inclusive
+    start_time: float
+    end_time: float
+    label: str
+    keywords: List[str] = field(default_factory=list)
+    speakers: List[str] = field(default_factory=list)
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
