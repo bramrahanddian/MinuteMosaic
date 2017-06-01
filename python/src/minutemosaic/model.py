@@ -49,3 +49,12 @@ class Provenance:
     utterance_indices: List[int]
     note: str = ""
 
+    def to_dict(self) -> Dict[str, Any]:
+        return dataclasses.asdict(self)
+
+
+@dataclass
+class TopicSegment:
+    """A contiguous run of utterances judged to share a topic."""
+
+    segment_id: int
