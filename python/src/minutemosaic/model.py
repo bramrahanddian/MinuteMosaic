@@ -68,3 +68,12 @@ class TopicSegment:
 
     def to_dict(self) -> Dict[str, Any]:
         return {
+            "segment_id": self.segment_id,
+            "start_index": self.start_index,
+            "end_index": self.end_index,
+            "start_time": self.start_time,
+            "end_time": self.end_time,
+            "label": self.label,
+            "keywords": self.keywords,
+            "speakers": self.speakers,
+        }
