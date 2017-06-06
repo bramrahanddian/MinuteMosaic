@@ -77,3 +77,13 @@ class TopicSegment:
             "keywords": self.keywords,
             "speakers": self.speakers,
         }
+
+
+@dataclass
+class Decision:
+    decision_id: int
+    text: str
+    speaker: str
+    time: float
+    segment_id: Optional[int]
+    confidence: float
