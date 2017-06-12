@@ -96,3 +96,13 @@ class Decision:
 
 
 @dataclass
+class ActionItem:
+    action_id: int
+    text: str
+    owner: Optional[str]
+    due_hint: Optional[str]
+    speaker: str
+    time: float
+    segment_id: Optional[int]
+    confidence: float
+    provenance: Provenance
