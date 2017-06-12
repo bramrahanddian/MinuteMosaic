@@ -106,3 +106,12 @@ class ActionItem:
     segment_id: Optional[int]
     confidence: float
     provenance: Provenance
+
+    def to_dict(self) -> Dict[str, Any]:
+        d = dataclasses.asdict(self)
+        d["provenance"] = self.provenance.to_dict()
+        return d
+
+
+@dataclass
+class MeetingReport:
