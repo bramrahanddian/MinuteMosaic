@@ -20,3 +20,15 @@ def render_json(report: MeetingReport, *, indent: int = 2) -> str:
 
 
 def _fmt_time(seconds: float) -> str:
+    seconds = int(round(seconds))
+    return f"{seconds // 60:02d}:{seconds % 60:02d}"
+
+
+def _confidence_class(c: float) -> str:
+    if c >= 0.8:
+        return "conf-high"
+    if c >= 0.6:
+        return "conf-med"
+    return "conf-low"
+
+
