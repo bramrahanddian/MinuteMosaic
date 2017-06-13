@@ -32,3 +32,14 @@ def _confidence_class(c: float) -> str:
     return "conf-low"
 
 
+_PALETTE = ["#c1272d", "#e8a33d", "#2e7d32", "#1565c0", "#6a1b9a", "#00838f", "#ad1457"]
+
+
+def _seg_color(seg_id: int) -> str:
+    return _PALETTE[seg_id % len(_PALETTE)]
+
+
+def render_html(report: MeetingReport) -> str:
+    d = report.to_dict()
+    esc = html.escape
+
