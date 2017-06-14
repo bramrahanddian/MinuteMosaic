@@ -67,3 +67,14 @@ def render_html(report: MeetingReport) -> str:
     seg_rows = []
     for s in report.segments:
         seg_rows.append(
+            f'<li><span class="chip" style="background:{_seg_color(s.segment_id)}"></span>'
+            f'<strong>{esc(s.label)}</strong> '
+            f'<span class="muted">{_fmt_time(s.start_time)}–{_fmt_time(s.end_time)} · '
+            f'{esc(", ".join(s.speakers))}</span></li>'
+        )
+
+    def claim_block(kind: str, cid: int, text: str, meta: str, conf: float, prov) -> str:
+        links = " ".join(
+            f'<a href="#u{i}" class="ev">#{i}</a>' for i in prov.utterance_indices
+        )
+        return (
