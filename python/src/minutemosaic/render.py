@@ -90,3 +90,15 @@ def render_html(report: MeetingReport) -> str:
         )
 
     decision_html = "".join(
+        claim_block(
+            "Decision",
+            dec.decision_id,
+            dec.text,
+            f"{dec.speaker} @ {_fmt_time(dec.time)}",
+            dec.confidence,
+            dec.provenance,
+        )
+        for dec in report.decisions
+    ) or '<p class="muted">No decisions detected.</p>'
+
+    action_html = "".join(
