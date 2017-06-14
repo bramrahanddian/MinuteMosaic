@@ -78,3 +78,15 @@ def render_html(report: MeetingReport) -> str:
             f'<a href="#u{i}" class="ev">#{i}</a>' for i in prov.utterance_indices
         )
         return (
+            f'<div class="claim {_confidence_class(conf)}">'
+            f'<div class="claim-head"><span class="badge">{kind} {cid}</span>'
+            f'<span class="conf">confidence {conf:.2f}</span></div>'
+            f'<p class="claim-text">{esc(text)}</p>'
+            f'<p class="meta">{esc(meta)}</p>'
+            f'<p class="prov">rule <code>{esc(prov.rule_id)}</code> · '
+            f'trigger <code>{esc(prov.trigger.strip())}</code> · evidence {links}</p>'
+            f'<p class="prov-note">{esc(prov.note)}</p>'
+            f"</div>"
+        )
+
+    decision_html = "".join(
