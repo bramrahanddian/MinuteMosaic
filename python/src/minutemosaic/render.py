@@ -55,3 +55,15 @@ def render_html(report: MeetingReport) -> str:
 
     facets = []
     for u in report.utterances:
+        left = (u.start - t0) / span * 100.0
+        width = max(0.4, u.duration / span * 100.0)
+        color = _seg_color(seg_of.get(u.index, 0))
+        title = esc(f"[{_fmt_time(u.start)}] {u.speaker}: {u.text}")
+        facets.append(
+            f'<span class="facet" style="left:{left:.3f}%;width:{width:.3f}%;'
+            f'background:{color}" title="{title}" data-idx="{u.index}"></span>'
+        )
+
+    seg_rows = []
+    for s in report.segments:
+        seg_rows.append(
