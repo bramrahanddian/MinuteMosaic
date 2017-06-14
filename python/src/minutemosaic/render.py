@@ -102,3 +102,14 @@ def render_html(report: MeetingReport) -> str:
     ) or '<p class="muted">No decisions detected.</p>'
 
     action_html = "".join(
+        claim_block(
+            "Action",
+            act.action_id,
+            act.text,
+            f"owner: {act.owner or 'unassigned'} · due: {act.due_hint or 'n/a'} · "
+            f"{act.speaker} @ {_fmt_time(act.time)}",
+            act.confidence,
+            act.provenance,
+        )
+        for act in report.actions
+    ) or '<p class="muted">No action items detected.</p>'
