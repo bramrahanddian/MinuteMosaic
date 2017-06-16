@@ -113,3 +113,15 @@ def render_html(report: MeetingReport) -> str:
         )
         for act in report.actions
     ) or '<p class="muted">No action items detected.</p>'
+
+    transcript_html = []
+    for u in report.utterances:
+        color = _seg_color(seg_of.get(u.index, 0))
+        transcript_html.append(
+            f'<div class="utt" id="u{u.index}">'
+            f'<span class="ubar" style="background:{color}"></span>'
+            f'<span class="ut">{_fmt_time(u.start)}</span>'
+            f'<span class="us">{esc(u.speaker)}</span>'
+            f'<span class="ux">{esc(u.text)}</span></div>'
+        )
+
