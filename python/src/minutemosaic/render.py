@@ -125,3 +125,15 @@ def render_html(report: MeetingReport) -> str:
             f'<span class="ux">{esc(u.text)}</span></div>'
         )
 
+    stats = d["stats"]
+    talk = "".join(
+        f"<li>{esc(spk)}: {secs:.0f}s</li>"
+        for spk, secs in sorted(stats["talk_time_seconds"].items(), key=lambda kv: -kv[1])
+    )
+
+    return _TEMPLATE.format(
+        title=esc(report.title),
+        generated=esc(report.generated_at),
+        source=esc(report.source),
+        facets="".join(facets),
+        seg_rows="".join(seg_rows),
