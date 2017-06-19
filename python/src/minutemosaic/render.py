@@ -137,3 +137,14 @@ def render_html(report: MeetingReport) -> str:
         source=esc(report.source),
         facets="".join(facets),
         seg_rows="".join(seg_rows),
+        decisions=decision_html,
+        actions=action_html,
+        transcript="".join(transcript_html),
+        u_count=stats["utterance_count"],
+        s_count=stats["segment_count"],
+        d_count=stats["decision_count"],
+        a_count=stats["action_count"],
+        talk=talk,
+        span=_fmt_time(stats["meeting_span_seconds"]),
+    )
+
