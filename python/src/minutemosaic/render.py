@@ -160,3 +160,14 @@ body {{ margin:0; background:var(--bg); color:var(--ink);
   font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }}
 header {{ padding:28px 24px; border-bottom:1px solid var(--line);
   background:linear-gradient(120deg,#1b1c22,#101116); }}
+h1 {{ margin:0 0 4px; font-size:26px; letter-spacing:.3px; }}
+.sub {{ color:var(--muted); font-size:13px; }}
+.wrap {{ max-width:960px; margin:0 auto; padding:24px; }}
+.timeline {{ position:relative; height:64px; border-radius:8px; overflow:hidden;
+  background:#0a0a0c; border:1px solid var(--line); box-shadow:inset 0 0 24px #000; }}
+.facet {{ position:absolute; top:0; height:100%; opacity:.82; border-right:1px solid #0a0a0c;
+  transition:opacity .15s; }}
+.facet:hover {{ opacity:1; }}
+.grid {{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:18px 0; }}
+.stat {{ background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px; }}
+.stat b {{ display:block; font-size:24px; }}
