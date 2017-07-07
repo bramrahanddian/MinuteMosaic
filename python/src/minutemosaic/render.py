@@ -171,3 +171,15 @@ h1 {{ margin:0 0 4px; font-size:26px; letter-spacing:.3px; }}
 .grid {{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:18px 0; }}
 .stat {{ background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px; }}
 .stat b {{ display:block; font-size:24px; }}
+.stat span {{ color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.5px; }}
+h2 {{ margin:28px 0 12px; font-size:18px; border-left:3px solid #e8a33d; padding-left:10px; }}
+ul.seg {{ list-style:none; padding:0; margin:0; }}
+ul.seg li {{ padding:6px 0; border-bottom:1px solid var(--line); }}
+.chip {{ display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:8px;
+  vertical-align:middle; }}
+.muted {{ color:var(--muted); }}
+.claim {{ background:var(--panel); border:1px solid var(--line); border-left-width:4px;
+  border-radius:8px; padding:14px; margin:12px 0; }}
+.conf-high {{ border-left-color:#2e7d32; }}
+.conf-med {{ border-left-color:#e8a33d; }}
+.conf-low {{ border-left-color:#c1272d; }}
