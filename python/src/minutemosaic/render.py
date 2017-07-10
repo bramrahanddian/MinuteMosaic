@@ -183,3 +183,15 @@ ul.seg li {{ padding:6px 0; border-bottom:1px solid var(--line); }}
 .conf-high {{ border-left-color:#2e7d32; }}
 .conf-med {{ border-left-color:#e8a33d; }}
 .conf-low {{ border-left-color:#c1272d; }}
+.claim-head {{ display:flex; justify-content:space-between; align-items:center; }}
+.badge {{ font-size:11px; text-transform:uppercase; letter-spacing:.6px; color:#0f1013;
+  background:#e9e7df; padding:2px 8px; border-radius:20px; }}
+.conf {{ color:var(--muted); font-size:12px; }}
+.claim-text {{ margin:8px 0 4px; font-size:15px; }}
+.meta {{ margin:0; color:var(--muted); font-size:13px; }}
+.prov {{ margin:8px 0 2px; font-size:12px; color:#b9c6e0; }}
+.prov-note {{ margin:0; font-size:12px; color:var(--muted); font-style:italic; }}
+code {{ background:#0a0a0c; padding:1px 5px; border-radius:4px; color:#e8a33d; }}
+a.ev {{ color:#7fb0ff; text-decoration:none; border-bottom:1px dotted #7fb0ff; }}
+.utt {{ display:flex; gap:10px; padding:6px 0; align-items:baseline;
+  border-bottom:1px solid #202127; }}
