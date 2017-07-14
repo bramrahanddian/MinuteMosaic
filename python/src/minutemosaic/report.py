@@ -12,3 +12,8 @@ from .segment import segment_for_index, segment_topics
 
 def build_report(
     utterances: List[Utterance],
+    *,
+    title: str,
+    source: str,
+    cohesion_threshold: float = 0.12,
+    silence_gap: float = 8.0,
