@@ -17,3 +17,7 @@ def build_report(
     source: str,
     cohesion_threshold: float = 0.12,
     silence_gap: float = 8.0,
+) -> MeetingReport:
+    segments = segment_topics(
+        utterances, cohesion_threshold=cohesion_threshold, silence_gap=silence_gap
+    )
