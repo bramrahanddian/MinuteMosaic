@@ -21,3 +21,8 @@ def build_report(
     segments = segment_topics(
         utterances, cohesion_threshold=cohesion_threshold, silence_gap=silence_gap
     )
+
+    def segment_of(index: int):
+        return segment_for_index(segments, index)
+
+    decisions = extract_decisions(utterances, segment_of)
