@@ -26,3 +26,8 @@ def build_report(
         return segment_for_index(segments, index)
 
     decisions = extract_decisions(utterances, segment_of)
+    actions = extract_actions(utterances, segment_of)
+
+    speakers = sorted({u.speaker for u in utterances})
+    total_time = utterances[-1].end - utterances[0].start if utterances else 0.0
+    talk_time = {}
