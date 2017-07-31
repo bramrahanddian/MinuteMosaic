@@ -31,3 +31,7 @@ def build_report(
     speakers = sorted({u.speaker for u in utterances})
     total_time = utterances[-1].end - utterances[0].start if utterances else 0.0
     talk_time = {}
+    for u in utterances:
+        talk_time[u.speaker] = round(talk_time.get(u.speaker, 0.0) + u.duration, 2)
+
+    stats = {
