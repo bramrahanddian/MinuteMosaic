@@ -35,3 +35,8 @@ def build_report(
         talk_time[u.speaker] = round(talk_time.get(u.speaker, 0.0) + u.duration, 2)
 
     stats = {
+        "utterance_count": len(utterances),
+        "segment_count": len(segments),
+        "decision_count": len(decisions),
+        "action_count": len(actions),
+        "speakers": speakers,
