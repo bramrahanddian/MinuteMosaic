@@ -40,3 +40,7 @@ def build_report(
         "decision_count": len(decisions),
         "action_count": len(actions),
         "speakers": speakers,
+        "meeting_span_seconds": round(total_time, 2),
+        "talk_time_seconds": talk_time,
+    }
+
