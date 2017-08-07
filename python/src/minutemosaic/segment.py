@@ -9,3 +9,10 @@ same input, same segments, every time.
 
 from __future__ import annotations
 
+import re
+from collections import Counter
+from typing import List, Set
+
+from .model import TopicSegment, Utterance
+
+_WORD_RE = re.compile(r"[a-z0-9']+")
