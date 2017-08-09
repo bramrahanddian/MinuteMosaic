@@ -24,3 +24,10 @@ _STOPWORDS: Set[str] = set(
     up us was we were what when which who will with you your""".split()
 )
 
+
+def _keywords(text: str) -> Counter:
+    words = [w for w in _WORD_RE.findall(text.lower()) if w not in _STOPWORDS and len(w) > 2]
+    return Counter(words)
+
+
+def _cohesion(a: Counter, b: Counter) -> float:
