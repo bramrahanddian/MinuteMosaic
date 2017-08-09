@@ -31,3 +31,11 @@ def _keywords(text: str) -> Counter:
 
 
 def _cohesion(a: Counter, b: Counter) -> float:
+    """Cosine-like overlap of two keyword bags in [0, 1]."""
+    if not a or not b:
+        return 0.0
+    shared = set(a) & set(b)
+    if not shared:
+        return 0.0
+    dot = sum(a[w] * b[w] for w in shared)
+    na = sum(v * v for v in a.values()) ** 0.5
