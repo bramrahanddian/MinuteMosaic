@@ -61,3 +61,11 @@ def segment_topics(
 
     boundaries = [0]
     recent: List[Counter] = [_keywords(utterances[0].text)]
+    for i in range(1, len(utterances)):
+        cur = _keywords(utterances[i].text)
+        context = Counter()
+        for c in recent[-window:]:
+            context.update(c)
+        gap = utterances[i].start - utterances[i - 1].end
+        low_cohesion = _cohesion(context, cur) < cohesion_threshold
+        big_gap = gap >= silence_gap
