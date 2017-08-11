@@ -69,3 +69,10 @@ def segment_topics(
         gap = utterances[i].start - utterances[i - 1].end
         low_cohesion = _cohesion(context, cur) < cohesion_threshold
         big_gap = gap >= silence_gap
+        if (low_cohesion and cur) or big_gap:
+            boundaries.append(i)
+            recent = [cur]
+        else:
+            recent.append(cur)
+
+    boundaries.append(len(utterances))
