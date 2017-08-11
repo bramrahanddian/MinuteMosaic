@@ -54,3 +54,10 @@ def segment_topics(
     - ``cohesion_threshold``: below this, a topic boundary is opened.
     - ``silence_gap``: a pause (seconds) at least this long also opens a boundary.
     - ``window``: how many recent utterances define the "current topic" bag.
+    """
+
+    if not utterances:
+        return []
+
+    boundaries = [0]
+    recent: List[Counter] = [_keywords(utterances[0].text)]
