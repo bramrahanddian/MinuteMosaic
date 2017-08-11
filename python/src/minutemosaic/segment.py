@@ -46,3 +46,11 @@ def _cohesion(a: Counter, b: Counter) -> float:
 def segment_topics(
     utterances: List[Utterance],
     cohesion_threshold: float = 0.12,
+    silence_gap: float = 8.0,
+    window: int = 3,
+) -> List[TopicSegment]:
+    """Return topic segments covering all utterances.
+
+    - ``cohesion_threshold``: below this, a topic boundary is opened.
+    - ``silence_gap``: a pause (seconds) at least this long also opens a boundary.
+    - ``window``: how many recent utterances define the "current topic" bag.
