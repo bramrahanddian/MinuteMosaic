@@ -39,3 +39,10 @@ def _cohesion(a: Counter, b: Counter) -> float:
         return 0.0
     dot = sum(a[w] * b[w] for w in shared)
     na = sum(v * v for v in a.values()) ** 0.5
+    nb = sum(v * v for v in b.values()) ** 0.5
+    return dot / (na * nb) if na and nb else 0.0
+
+
+def segment_topics(
+    utterances: List[Utterance],
+    cohesion_threshold: float = 0.12,
