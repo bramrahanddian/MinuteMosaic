@@ -76,3 +76,11 @@ def segment_topics(
             recent.append(cur)
 
     boundaries.append(len(utterances))
+
+    segments: List[TopicSegment] = []
+    for seg_id, (lo, hi) in enumerate(zip(boundaries, boundaries[1:])):
+        chunk = utterances[lo:hi]
+        bag = Counter()
+        speakers: List[str] = []
+        for u in chunk:
+            bag.update(_keywords(u.text))
