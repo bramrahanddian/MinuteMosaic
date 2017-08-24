@@ -84,3 +84,10 @@ def segment_topics(
         speakers: List[str] = []
         for u in chunk:
             bag.update(_keywords(u.text))
+            if u.speaker not in speakers:
+                speakers.append(u.speaker)
+        top = [w for w, _ in bag.most_common(5)]
+        label = " / ".join(top[:3]) if top else "general discussion"
+        segments.append(
+            TopicSegment(
+                segment_id=seg_id,
