@@ -9,3 +9,11 @@ import Foundation
 public struct Utterance: Codable, Identifiable, Equatable {
     public let index: Int
     public let start: TimeInterval
+    public let end: TimeInterval
+    public let speaker: String
+    public let text: String
+
+    public var id: Int { index }
+    public var duration: TimeInterval { max(0, end - start) }
+
+    public init(index: Int, start: TimeInterval, end: TimeInterval, speaker: String, text: String) {
