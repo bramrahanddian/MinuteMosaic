@@ -17,3 +17,12 @@ public struct Utterance: Codable, Identifiable, Equatable {
     public var duration: TimeInterval { max(0, end - start) }
 
     public init(index: Int, start: TimeInterval, end: TimeInterval, speaker: String, text: String) {
+        self.index = index
+        self.start = start
+        self.end = end
+        self.speaker = speaker
+        self.text = text
+    }
+}
+
+/// Evidence attached to a derived claim: which rule fired, on what trigger, and
