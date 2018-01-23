@@ -42,3 +42,12 @@ public struct Provenance: Codable, Equatable {
 
     enum CodingKeys: String, CodingKey {
         case ruleID = "rule_id"
+        case trigger
+        case utteranceIndices = "utterance_indices"
+        case note
+    }
+}
+
+/// Kinds of derived events that can appear on the evidence timeline.
+public enum EventKind: String, Codable {
+    case topic
