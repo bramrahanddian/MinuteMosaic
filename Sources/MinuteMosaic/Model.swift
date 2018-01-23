@@ -26,3 +26,11 @@ public struct Utterance: Codable, Identifiable, Equatable {
 }
 
 /// Evidence attached to a derived claim: which rule fired, on what trigger, and
+/// which utterance indices are the source spans.
+public struct Provenance: Codable, Equatable {
+    public let ruleID: String
+    public let trigger: String
+    public let utteranceIndices: [Int]
+    public let note: String
+
+    public init(ruleID: String, trigger: String, utteranceIndices: [Int], note: String = "") {
