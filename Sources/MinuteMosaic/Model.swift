@@ -34,3 +34,11 @@ public struct Provenance: Codable, Equatable {
     public let note: String
 
     public init(ruleID: String, trigger: String, utteranceIndices: [Int], note: String = "") {
+        self.ruleID = ruleID
+        self.trigger = trigger
+        self.utteranceIndices = utteranceIndices
+        self.note = note
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case ruleID = "rule_id"
