@@ -51,3 +51,11 @@ public struct Provenance: Codable, Equatable {
 /// Kinds of derived events that can appear on the evidence timeline.
 public enum EventKind: String, Codable {
     case topic
+    case decision
+    case action
+}
+
+/// A derived, evidence-backed event positioned on the meeting timeline.
+public struct TimelineEvent: Codable, Identifiable, Equatable {
+    public let id: Int
+    public let kind: EventKind
