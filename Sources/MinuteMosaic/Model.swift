@@ -59,3 +59,12 @@ public enum EventKind: String, Codable {
 public struct TimelineEvent: Codable, Identifiable, Equatable {
     public let id: Int
     public let kind: EventKind
+    public let time: TimeInterval
+    public let label: String
+    public let detail: String
+    public let confidence: Double
+    public let provenance: Provenance?
+
+    public init(
+        id: Int,
+        kind: EventKind,
