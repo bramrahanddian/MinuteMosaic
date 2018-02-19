@@ -68,3 +68,11 @@ public struct TimelineEvent: Codable, Identifiable, Equatable {
     public init(
         id: Int,
         kind: EventKind,
+        time: TimeInterval,
+        label: String,
+        detail: String,
+        confidence: Double,
+        provenance: Provenance?
+    ) {
+        self.id = id
+        self.kind = kind
