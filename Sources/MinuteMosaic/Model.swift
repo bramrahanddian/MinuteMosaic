@@ -76,3 +76,12 @@ public struct TimelineEvent: Codable, Identifiable, Equatable {
     ) {
         self.id = id
         self.kind = kind
+        self.time = time
+        self.label = label
+        self.detail = detail
+        self.confidence = confidence
+        self.provenance = provenance
+    }
+}
+
+/// A whole meeting: the transcript plus derived events. This is the local
