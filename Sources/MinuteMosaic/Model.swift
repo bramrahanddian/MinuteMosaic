@@ -85,3 +85,11 @@ public struct TimelineEvent: Codable, Identifiable, Equatable {
 }
 
 /// A whole meeting: the transcript plus derived events. This is the local
+/// document type the app persists; there is no remote service involved.
+public struct Meeting: Codable, Equatable {
+    public let title: String
+    public let source: String
+    public var utterances: [Utterance]
+    public var events: [TimelineEvent]
+
+    public init(title: String, source: String, utterances: [Utterance], events: [TimelineEvent] = []) {
