@@ -1,0 +1,9 @@
+import Foundation
+
+/// Privacy and retention policy for locally stored meetings.
+///
+/// minutemosaic is local-first: nothing here uploads data anywhere. These
+/// settings govern how long transcripts live on disk and whether raw text is
+/// redacted when exporting the evidence timeline.
+public struct PrivacySettings: Codable, Equatable {
+    /// How long to keep meeting documents before they are eligible for pruning.
