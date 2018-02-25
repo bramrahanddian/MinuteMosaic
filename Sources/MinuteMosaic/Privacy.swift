@@ -7,3 +7,9 @@ import Foundation
 /// redacted when exporting the evidence timeline.
 public struct PrivacySettings: Codable, Equatable {
     /// How long to keep meeting documents before they are eligible for pruning.
+    public enum Retention: Codable, Equatable {
+        case forever
+        case days(Int)
+
+        /// Cutoff date before which meetings are expired, relative to `now`.
+        public func cutoff(from now: Date) -> Date? {
