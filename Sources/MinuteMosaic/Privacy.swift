@@ -13,3 +13,9 @@ public struct PrivacySettings: Codable, Equatable {
 
         /// Cutoff date before which meetings are expired, relative to `now`.
         public func cutoff(from now: Date) -> Date? {
+            switch self {
+            case .forever:
+                return nil
+            case .days(let d):
+                return Calendar.current.date(byAdding: .day, value: -d, to: now)
+            }
