@@ -25,3 +25,9 @@ public struct PrivacySettings: Codable, Equatable {
     /// Retain everything by default; the user chooses to shorten this.
     public var retention: Retention
     /// If true, exports replace utterance text with a length-preserving mask so
+    /// the timeline shape is shareable without leaking content.
+    public var redactTranscriptOnExport: Bool
+    /// If true, speaker names are replaced with stable pseudonyms on export.
+    public var pseudonymizeSpeakers: Bool
+
+    public init(
