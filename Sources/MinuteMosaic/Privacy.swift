@@ -19,3 +19,9 @@ public struct PrivacySettings: Codable, Equatable {
             case .days(let d):
                 return Calendar.current.date(byAdding: .day, value: -d, to: now)
             }
+        }
+    }
+
+    /// Retain everything by default; the user chooses to shorten this.
+    public var retention: Retention
+    /// If true, exports replace utterance text with a length-preserving mask so
