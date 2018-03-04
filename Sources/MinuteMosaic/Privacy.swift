@@ -31,3 +31,9 @@ public struct PrivacySettings: Codable, Equatable {
     public var pseudonymizeSpeakers: Bool
 
     public init(
+        retention: Retention = .forever,
+        redactTranscriptOnExport: Bool = false,
+        pseudonymizeSpeakers: Bool = false
+    ) {
+        self.retention = retention
+        self.redactTranscriptOnExport = redactTranscriptOnExport
