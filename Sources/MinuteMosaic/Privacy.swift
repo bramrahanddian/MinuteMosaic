@@ -43,3 +43,10 @@ public struct PrivacySettings: Codable, Equatable {
     /// A conservative, share-friendly preset.
     public static let shareSafe = PrivacySettings(
         retention: .days(30),
+        redactTranscriptOnExport: true,
+        pseudonymizeSpeakers: true
+    )
+}
+
+public enum RetentionEngine {
+    /// Return true if a meeting recorded at `recordedAt` should be pruned under
