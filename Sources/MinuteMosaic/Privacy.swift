@@ -37,3 +37,9 @@ public struct PrivacySettings: Codable, Equatable {
     ) {
         self.retention = retention
         self.redactTranscriptOnExport = redactTranscriptOnExport
+        self.pseudonymizeSpeakers = pseudonymizeSpeakers
+    }
+
+    /// A conservative, share-friendly preset.
+    public static let shareSafe = PrivacySettings(
+        retention: .days(30),
