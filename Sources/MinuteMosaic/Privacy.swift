@@ -56,3 +56,9 @@ public enum RetentionEngine {
         return recordedAt < cutoff
     }
 
+    /// Apply export-time privacy transforms to a meeting, returning a copy.
+    public static func applyExportPolicy(to meeting: Meeting, settings: PrivacySettings) -> Meeting {
+        guard settings.redactTranscriptOnExport || settings.pseudonymizeSpeakers else {
+            return meeting
+        }
+
