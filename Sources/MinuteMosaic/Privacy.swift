@@ -68,3 +68,9 @@ public enum RetentionEngine {
         func pseudonym(for name: String) -> String {
             if let existing = speakerMap[name] { return existing }
             let alias = "Speaker \(Character(UnicodeScalar(65 + (nextSpeaker % 26))!))"
+            nextSpeaker += 1
+            speakerMap[name] = alias
+            return alias
+        }
+
+        let transformed = meeting.utterances.map { u -> Utterance in
