@@ -50,3 +50,9 @@ public struct PrivacySettings: Codable, Equatable {
 
 public enum RetentionEngine {
     /// Return true if a meeting recorded at `recordedAt` should be pruned under
+    /// `settings` as of `now`.
+    public static func isExpired(recordedAt: Date, settings: PrivacySettings, now: Date = Date()) -> Bool {
+        guard let cutoff = settings.retention.cutoff(from: now) else { return false }
+        return recordedAt < cutoff
+    }
+
