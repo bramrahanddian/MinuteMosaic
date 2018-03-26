@@ -7,3 +7,9 @@ import Foundation
 public enum TimelineRenderer {
 
     /// A laid-out facet for a single utterance, normalized to `0...1` on x.
+    public struct Facet: Equatable {
+        public let utteranceIndex: Int
+        public let x: Double
+        public let width: Double
+        public let speaker: String
+    }
