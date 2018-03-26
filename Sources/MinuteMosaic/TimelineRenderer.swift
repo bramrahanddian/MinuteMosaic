@@ -13,3 +13,10 @@ public enum TimelineRenderer {
         public let width: Double
         public let speaker: String
     }
+
+    /// Compute stained-glass facets across the meeting span.
+    public static func facets(for meeting: Meeting) -> [Facet] {
+        guard let first = meeting.utterances.first else { return [] }
+        let span = max(0.000001, meeting.span)
+        let t0 = first.start
+        return meeting.utterances.map { u in
