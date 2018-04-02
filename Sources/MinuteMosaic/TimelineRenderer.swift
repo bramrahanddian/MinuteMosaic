@@ -20,3 +20,9 @@ public enum TimelineRenderer {
         let span = max(0.000001, meeting.span)
         let t0 = first.start
         return meeting.utterances.map { u in
+            Facet(
+                utteranceIndex: u.index,
+                x: (u.start - t0) / span,
+                width: max(0.004, u.duration / span),
+                speaker: u.speaker
+            )
