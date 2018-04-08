@@ -33,3 +33,9 @@ public enum TimelineRenderer {
         let s = Int(t.rounded())
         return String(format: "%02d:%02d", s / 60, s % 60)
     }
+
+    /// A compact, human-readable evidence timeline as plain text.
+    public static func renderText(_ meeting: Meeting) -> String {
+        var lines: [String] = []
+        lines.append("# \(meeting.title)")
+        lines.append("source: \(meeting.source) · span \(fmt(meeting.span)) · local-first, offline")
