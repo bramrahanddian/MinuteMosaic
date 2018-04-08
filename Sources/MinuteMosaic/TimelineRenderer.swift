@@ -39,3 +39,10 @@ public enum TimelineRenderer {
         var lines: [String] = []
         lines.append("# \(meeting.title)")
         lines.append("source: \(meeting.source) · span \(fmt(meeting.span)) · local-first, offline")
+        lines.append("")
+        for event in meeting.events.sorted(by: { $0.time < $1.time }) {
+            let ev = event.provenance?.utteranceIndices.map { "#\($0)" }.joined(separator: ",") ?? "-"
+            lines.append("[\(fmt(event.time))] \(event.kind.rawValue.uppercased()) (\(String(format: "%.2f", event.confidence))) \(event.label)")
+            lines.append("    \(event.detail)")
+            if let prov = event.provenance {
+                lines.append("    rule=\(prov.ruleID) trigger='\(prov.trigger)' evidence=\(ev)")
