@@ -26,3 +26,10 @@ public enum TimelineRenderer {
                 width: max(0.004, u.duration / span),
                 speaker: u.speaker
             )
+        }
+    }
+
+    private static func fmt(_ t: TimeInterval) -> String {
+        let s = Int(t.rounded())
+        return String(format: "%02d:%02d", s / 60, s % 60)
+    }
