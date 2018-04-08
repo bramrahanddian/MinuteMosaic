@@ -46,3 +46,9 @@ public enum TimelineRenderer {
             lines.append("    \(event.detail)")
             if let prov = event.provenance {
                 lines.append("    rule=\(prov.ruleID) trigger='\(prov.trigger)' evidence=\(ev)")
+            }
+        }
+        return lines.joined(separator: "\n")
+    }
+
+    /// Export the meeting (after applying privacy policy) as pretty JSON `Data`.
