@@ -52,3 +52,10 @@ public enum TimelineRenderer {
     }
 
     /// Export the meeting (after applying privacy policy) as pretty JSON `Data`.
+    public static func exportJSON(_ meeting: Meeting, settings: PrivacySettings = PrivacySettings()) throws -> Data {
+        let safe = RetentionEngine.applyExportPolicy(to: meeting, settings: settings)
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        return try encoder.encode(safe)
+    }
+
