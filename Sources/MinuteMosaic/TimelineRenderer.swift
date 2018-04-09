@@ -59,3 +59,9 @@ public enum TimelineRenderer {
         return try encoder.encode(safe)
     }
 
+    /// Export a self-contained SVG evidence timeline (stained-glass style).
+    /// Pure string synthesis — no external assets, no network.
+    public static func exportSVG(_ meeting: Meeting, width: Int = 900, height: Int = 120) -> String {
+        let palette = ["#c1272d", "#e8a33d", "#2e7d32", "#1565c0", "#6a1b9a", "#00838f", "#ad1457"]
+        var facetSVG = ""
+        for (i, facet) in facets(for: meeting).enumerated() {
