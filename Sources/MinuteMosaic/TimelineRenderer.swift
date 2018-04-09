@@ -72,3 +72,9 @@ public enum TimelineRenderer {
         }
         return """
         <svg xmlns="http://www.w3.org/2000/svg" width="\(width)" height="\(height)" viewBox="0 0 \(width) \(height)">
+        <rect width="\(width)" height="\(height)" fill="#0a0a0c"/>
+        \(facetSVG)
+        </svg>
+        """
+    }
+}
