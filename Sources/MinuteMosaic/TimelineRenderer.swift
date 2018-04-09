@@ -65,3 +65,10 @@ public enum TimelineRenderer {
         let palette = ["#c1272d", "#e8a33d", "#2e7d32", "#1565c0", "#6a1b9a", "#00838f", "#ad1457"]
         var facetSVG = ""
         for (i, facet) in facets(for: meeting).enumerated() {
+            let x = facet.x * Double(width)
+            let w = max(2.0, facet.width * Double(width))
+            let color = palette[i % palette.count]
+            facetSVG += "<rect x=\"\(String(format: "%.1f", x))\" y=\"8\" width=\"\(String(format: "%.1f", w))\" height=\"\(height - 16)\" fill=\"\(color)\" opacity=\"0.82\"/>"
+        }
+        return """
+        <svg xmlns="http://www.w3.org/2000/svg" width="\(width)" height="\(height)" viewBox="0 0 \(width) \(height)">
