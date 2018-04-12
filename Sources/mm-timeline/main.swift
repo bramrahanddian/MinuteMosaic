@@ -12,3 +12,8 @@ import MinuteMosaic
 func fail(_ message: String) -> Never {
     FileHandle.standardError.write(Data((message + "\n").utf8))
     exit(2)
+}
+
+let args = Array(CommandLine.arguments.dropFirst())
+guard let path = args.first, !path.hasPrefix("--") else {
+    fail("usage: mm-timeline <report.json> [--svg out.svg] [--share-safe]")
