@@ -8,3 +8,7 @@ import MinuteMosaic
 //   mm-timeline <report.json> [--svg out.svg] [--share-safe]
 //
 // No network. No audio. It only reads local JSON and writes local files.
+
+func fail(_ message: String) -> Never {
+    FileHandle.standardError.write(Data((message + "\n").utf8))
+    exit(2)
