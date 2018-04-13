@@ -21,3 +21,8 @@ guard let path = args.first, !path.hasPrefix("--") else {
 
 var svgOut: String?
 var settings = PrivacySettings()
+var i = 1
+while i < args.count {
+    switch args[i] {
+    case "--svg":
+        i += 1
