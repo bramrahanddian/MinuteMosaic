@@ -17,3 +17,7 @@ func fail(_ message: String) -> Never {
 let args = Array(CommandLine.arguments.dropFirst())
 guard let path = args.first, !path.hasPrefix("--") else {
     fail("usage: mm-timeline <report.json> [--svg out.svg] [--share-safe]")
+}
+
+var svgOut: String?
+var settings = PrivacySettings()
