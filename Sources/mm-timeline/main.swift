@@ -26,3 +26,8 @@ while i < args.count {
     switch args[i] {
     case "--svg":
         i += 1
+        guard i < args.count else { fail("--svg requires a path") }
+        svgOut = args[i]
+    case "--share-safe":
+        settings = .shareSafe
+    default:
