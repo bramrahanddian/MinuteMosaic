@@ -35,3 +35,8 @@ while i < args.count {
     }
     i += 1
 }
+
+guard let data = FileManager.default.contents(atPath: path) else {
+    fail("cannot read file: \(path)")
+}
+
