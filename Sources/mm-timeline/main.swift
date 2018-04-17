@@ -40,3 +40,7 @@ guard let data = FileManager.default.contents(atPath: path) else {
     fail("cannot read file: \(path)")
 }
 
+do {
+    var meeting = try Meeting.fromReportJSON(data)
+    if settings.redactTranscriptOnExport || settings.pseudonymizeSpeakers {
+        meeting = RetentionEngine.applyExportPolicy(to: meeting, settings: settings)
