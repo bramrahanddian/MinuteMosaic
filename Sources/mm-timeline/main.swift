@@ -31,3 +31,7 @@ while i < args.count {
     case "--share-safe":
         settings = .shareSafe
     default:
+        fail("unknown argument: \(args[i])")
+    }
+    i += 1
+}
