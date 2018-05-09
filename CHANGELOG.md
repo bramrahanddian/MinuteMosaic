@@ -83,4 +83,4 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 - Core data model (`Utterance`, `Segment`, `MeetingReport`) and JSON report
   output.
 
-<!-- draft note 74 -->
+<!-- draft note 75 -->
