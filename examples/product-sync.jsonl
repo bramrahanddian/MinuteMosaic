@@ -5,3 +5,5 @@
 {"start": 9.4, "end": 13.8, "speaker": "Mei", "text": "I can pick up the onboarding bugs today and get fixes in by Friday."}
 {"start": 14.0, "end": 18.6, "speaker": "Ada", "text": "Great. Let's go with a Friday cutoff for the release candidate then."}
 {"start": 18.9, "end": 22.0, "speaker": "Ravi", "text": "Agreed, Friday works for me for the RC."}
+{"start": 35.0, "end": 40.5, "speaker": "Ada", "text": "Switching topics, the pricing page redesign has been sitting for a while."}
+{"start": 41.0, "end": 46.3, "speaker": "Mei", "text": "We decided last sprint to go with the three-tier layout, so I'll finalize the copy."}
