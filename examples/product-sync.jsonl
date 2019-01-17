@@ -1,1 +1,3 @@
 # Example transcript: a short product sync. Timestamps are seconds from start.
+# minutemosaic consumes transcripts like this — it does NOT produce them.
+{"start": 0.0, "end": 4.2, "speaker": "Ada", "text": "Morning everyone, let's start with the release timeline for the mobile app."}
