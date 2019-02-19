@@ -1,0 +1,45 @@
+{
+  "schema": "minutemosaic/report/v1",
+  "title": "Product Sync",
+  "generated_at": "2026-08-31T19:21:07+00:00",
+  "source": "..\\..\\examples\\product-sync.jsonl",
+  "stats": {
+    "utterance_count": 12,
+    "segment_count": 9,
+    "decision_count": 4,
+    "action_count": 6,
+    "speakers": [
+      "Ada",
+      "Mei",
+      "Ravi"
+    ],
+    "meeting_span_seconds": 86.4,
+    "talk_time_seconds": {
+      "Ada": 24.6,
+      "Ravi": 17.6,
+      "Mei": 14.2
+    }
+  },
+  "utterances": [
+    {
+      "index": 0,
+      "start": 0.0,
+      "end": 4.2,
+      "speaker": "Ada",
+      "text": "Morning everyone, let's start with the release timeline for the mobile app."
+    },
+    {
+      "index": 1,
+      "start": 4.5,
+      "end": 9.1,
+      "speaker": "Ravi",
+      "text": "The build is green but the onboarding flow still has two blocking bugs."
+    },
+    {
+      "index": 2,
+      "start": 9.4,
+      "end": 13.8,
+      "speaker": "Mei",
+      "text": "I can pick up the onboarding bugs today and get fixes in by Friday."
+    },
+    {
