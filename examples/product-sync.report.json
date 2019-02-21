@@ -92,3 +92,28 @@
       "text": "Last thing, the incident postmortem from last week's outage."
     },
     {
+      "index": 10,
+      "start": 75.5,
+      "end": 81.0,
+      "speaker": "Ravi",
+      "text": "We need to add better alerting on the payment service, that was the root cause."
+    },
+    {
+      "index": 11,
+      "start": 81.3,
+      "end": 86.4,
+      "speaker": "Ada",
+      "text": "Let's adopt the new alerting playbook and circle back next week on progress."
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": 0,
+      "start_index": 0,
+      "end_index": 0,
+      "start_time": 0.0,
+      "end_time": 4.2,
+      "label": "morning / everyone / let's",
+      "keywords": [
+        "morning",
+        "everyone",
