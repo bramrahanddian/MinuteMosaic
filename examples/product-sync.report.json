@@ -117,3 +117,28 @@
       "keywords": [
         "morning",
         "everyone",
+        "let's",
+        "start",
+        "release"
+      ],
+      "speakers": [
+        "Ada"
+      ]
+    },
+    {
+      "segment_id": 1,
+      "start_index": 1,
+      "end_index": 2,
+      "start_time": 4.5,
+      "end_time": 13.8,
+      "label": "onboarding / bugs / build",
+      "keywords": [
+        "onboarding",
+        "bugs",
+        "build",
+        "green",
+        "flow"
+      ],
+      "speakers": [
+        "Ravi",
+        "Mei"
