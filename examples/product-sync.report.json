@@ -142,3 +142,27 @@
       "speakers": [
         "Ravi",
         "Mei"
+      ]
+    },
+    {
+      "segment_id": 2,
+      "start_index": 3,
+      "end_index": 4,
+      "start_time": 14.0,
+      "end_time": 22.0,
+      "label": "friday / great / let's",
+      "keywords": [
+        "friday",
+        "great",
+        "let's",
+        "cutoff",
+        "release"
+      ],
+      "speakers": [
+        "Ada",
+        "Ravi"
+      ]
+    },
+    {
+      "segment_id": 3,
+      "start_index": 5,
