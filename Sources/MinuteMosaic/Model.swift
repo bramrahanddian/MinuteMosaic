@@ -93,3 +93,19 @@ public struct Meeting: Codable, Equatable {
     public var events: [TimelineEvent]
 
     public init(title: String, source: String, utterances: [Utterance], events: [TimelineEvent] = []) {
+        self.title = title
+        self.source = source
+        self.utterances = utterances
+        self.events = events
+    }
+
+    public var span: TimeInterval {
+        guard let first = utterances.first, let last = utterances.last else { return 0 }
+        return max(0, last.end - first.start)
+    }
+
+    /// Resolve the source utterances backing an event's provenance.
+    public func evidence(for event: TimelineEvent) -> [Utterance] {
+        guard let prov = event.provenance else { return [] }
+        let set = Set(prov.utteranceIndices)
+        return utterances.filter { set.contains($0.index) }
