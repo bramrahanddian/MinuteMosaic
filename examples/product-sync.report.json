@@ -166,3 +166,28 @@
     {
       "segment_id": 3,
       "start_index": 5,
+      "end_index": 5,
+      "start_time": 35.0,
+      "end_time": 40.5,
+      "label": "switching / topics / pricing",
+      "keywords": [
+        "switching",
+        "topics",
+        "pricing",
+        "page",
+        "redesign"
+      ],
+      "speakers": [
+        "Ada"
+      ]
+    },
+    {
+      "segment_id": 4,
+      "start_index": 6,
+      "end_index": 6,
+      "start_time": 41.0,
+      "end_time": 46.3,
+      "label": "decided / last / sprint",
+      "keywords": [
+        "decided",
+        "last",
