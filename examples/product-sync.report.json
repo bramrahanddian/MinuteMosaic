@@ -191,3 +191,28 @@
       "keywords": [
         "decided",
         "last",
+        "sprint",
+        "three",
+        "tier"
+      ],
+      "speakers": [
+        "Mei"
+      ]
+    },
+    {
+      "segment_id": 5,
+      "start_index": 7,
+      "end_index": 8,
+      "start_time": 46.6,
+      "end_time": 55.8,
+      "label": "send / mockups / marketing",
+      "keywords": [
+        "send",
+        "mockups",
+        "marketing",
+        "can",
+        "also"
+      ],
+      "speakers": [
+        "Ravi",
+        "Mei"
