@@ -240,3 +240,28 @@
       "segment_id": 7,
       "start_index": 10,
       "end_index": 10,
+      "start_time": 75.5,
+      "end_time": 81.0,
+      "label": "need / add / better",
+      "keywords": [
+        "need",
+        "add",
+        "better",
+        "alerting",
+        "payment"
+      ],
+      "speakers": [
+        "Ravi"
+      ]
+    },
+    {
+      "segment_id": 8,
+      "start_index": 11,
+      "end_index": 11,
+      "start_time": 81.3,
+      "end_time": 86.4,
+      "label": "let's / adopt / new",
+      "keywords": [
+        "let's",
+        "adopt",
+        "new",
