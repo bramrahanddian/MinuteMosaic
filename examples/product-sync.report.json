@@ -339,3 +339,28 @@
       }
     }
   ],
+  "actions": [
+    {
+      "action_id": 0,
+      "text": "Morning everyone, let's start with the release timeline for the mobile app.",
+      "owner": null,
+      "due_hint": null,
+      "speaker": "Ada",
+      "time": 0.0,
+      "segment_id": 0,
+      "confidence": 0.62,
+      "provenance": {
+        "rule_id": "action.imperative",
+        "trigger": "let's ",
+        "utterance_indices": [
+          0
+        ],
+        "note": "matched action cue 'let's'"
+      }
+    },
+    {
+      "action_id": 1,
+      "text": "Great. Let's go with a Friday cutoff for the release candidate then.",
+      "owner": null,
+      "due_hint": null,
+      "speaker": "Ada",
