@@ -265,3 +265,28 @@
         "let's",
         "adopt",
         "new",
+        "alerting",
+        "playbook"
+      ],
+      "speakers": [
+        "Ada"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": 0,
+      "text": "Great. Let's go with a Friday cutoff for the release candidate then.",
+      "speaker": "Ada",
+      "time": 14.0,
+      "segment_id": 2,
+      "confidence": 0.77,
+      "provenance": {
+        "rule_id": "decide.agree",
+        "trigger": "Let's go with",
+        "utterance_indices": [
+          3
+        ],
+        "note": "matched decision cue 'Let's go with' by Ada"
+      }
+    },
