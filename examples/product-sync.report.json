@@ -315,3 +315,27 @@
       "confidence": 0.95,
       "provenance": {
         "rule_id": "decide.explicit",
+        "trigger": "We decided",
+        "utterance_indices": [
+          6
+        ],
+        "note": "matched decision cue 'We decided' by Mei"
+      }
+    },
+    {
+      "decision_id": 3,
+      "text": "Let's adopt the new alerting playbook and circle back next week on progress.",
+      "speaker": "Ada",
+      "time": 81.3,
+      "segment_id": 8,
+      "confidence": 0.77,
+      "provenance": {
+        "rule_id": "decide.agree",
+        "trigger": "Let's adopt",
+        "utterance_indices": [
+          11
+        ],
+        "note": "matched decision cue 'Let's adopt' by Ada"
+      }
+    }
+  ],
