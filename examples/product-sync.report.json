@@ -290,3 +290,28 @@
         "note": "matched decision cue 'Let's go with' by Ada"
       }
     },
+    {
+      "decision_id": 1,
+      "text": "Agreed, Friday works for me for the RC.",
+      "speaker": "Ravi",
+      "time": 18.9,
+      "segment_id": 2,
+      "confidence": 0.65,
+      "provenance": {
+        "rule_id": "decide.consensus",
+        "trigger": "Agreed",
+        "utterance_indices": [
+          4
+        ],
+        "note": "matched decision cue 'Agreed' by Ravi"
+      }
+    },
+    {
+      "decision_id": 2,
+      "text": "We decided last sprint to go with the three-tier layout, so I'll finalize the copy.",
+      "speaker": "Mei",
+      "time": 41.0,
+      "segment_id": 4,
+      "confidence": 0.95,
+      "provenance": {
+        "rule_id": "decide.explicit",
