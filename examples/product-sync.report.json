@@ -364,3 +364,28 @@
       "owner": null,
       "due_hint": null,
       "speaker": "Ada",
+      "time": 14.0,
+      "segment_id": 2,
+      "confidence": 0.62,
+      "provenance": {
+        "rule_id": "action.imperative",
+        "trigger": "Let's ",
+        "utterance_indices": [
+          3
+        ],
+        "note": "matched action cue 'Let's'"
+      }
+    },
+    {
+      "action_id": 2,
+      "text": "Can you also send the updated mockups to marketing by end of week?",
+      "owner": null,
+      "due_hint": "end of week",
+      "speaker": "Ravi",
+      "time": 46.6,
+      "segment_id": 5,
+      "confidence": 0.8,
+      "provenance": {
+        "rule_id": "action.assign",
+        "trigger": "mockups to marketing by end of week?",
+        "utterance_indices": [
