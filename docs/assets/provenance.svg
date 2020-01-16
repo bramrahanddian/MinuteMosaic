@@ -10,3 +10,9 @@
     </marker>
   </defs>
 
+  <rect width="900" height="260" fill="url(#bg2)"/>
+  <text x="24" y="32" fill="#e9e7df" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="18" font-weight="600">provenance pipeline</text>
+  <text x="24" y="52" fill="#9a978d" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">transcript in · deterministic heuristics · every claim keeps its source spans · no audio, no cloud</text>
+
+  <!-- Audio waveform (decorative): this represents the transcript's rhythm, NOT a claim that we do ASR -->
+  <g stroke="#00838f" stroke-width="2" opacity="0.8">
