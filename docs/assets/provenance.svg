@@ -16,3 +16,8 @@
 
   <!-- Audio waveform (decorative): this represents the transcript's rhythm, NOT a claim that we do ASR -->
   <g stroke="#00838f" stroke-width="2" opacity="0.8">
+    <line x1="40" y1="150" x2="40" y2="150"><animate attributeName="y1" values="150;120;150" dur="1.2s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="y2" values="150;180;150" dur="1.2s" begin="0.0s" repeatCount="indefinite"/></line>
+    <line x1="52" y1="150" x2="52" y2="150"><animate attributeName="y1" values="150;108;150" dur="1.2s" begin="0.15s" repeatCount="indefinite"/><animate attributeName="y2" values="150;192;150" dur="1.2s" begin="0.15s" repeatCount="indefinite"/></line>
+    <line x1="64" y1="150" x2="64" y2="150"><animate attributeName="y1" values="150;132;150" dur="1.2s" begin="0.3s" repeatCount="indefinite"/><animate attributeName="y2" values="150;168;150" dur="1.2s" begin="0.3s" repeatCount="indefinite"/></line>
+    <line x1="76" y1="150" x2="76" y2="150"><animate attributeName="y1" values="150;100;150" dur="1.2s" begin="0.45s" repeatCount="indefinite"/><animate attributeName="y2" values="150;200;150" dur="1.2s" begin="0.45s" repeatCount="indefinite"/></line>
+    <line x1="88" y1="150" x2="88" y2="150"><animate attributeName="y1" values="150;128;150" dur="1.2s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="y2" values="150;172;150" dur="1.2s" begin="0.6s" repeatCount="indefinite"/></line>
