@@ -27,3 +27,9 @@
   <g font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12" text-anchor="middle">
     <rect x="120" y="120" width="130" height="60" rx="8" fill="#17181d" stroke="#2e7d32" stroke-width="1.5"/>
     <text x="185" y="146" fill="#e9e7df">utterance</text>
+    <text x="185" y="164" fill="#9a978d" font-size="10">#index · span</text>
+
+    <rect x="300" y="120" width="130" height="60" rx="8" fill="#17181d" stroke="#e8a33d" stroke-width="1.5"/>
+    <text x="365" y="146" fill="#e9e7df">heuristic rule</text>
+    <text x="365" y="164" fill="#9a978d" font-size="10">trigger match</text>
+
