@@ -33,3 +33,9 @@
     <text x="365" y="146" fill="#e9e7df">heuristic rule</text>
     <text x="365" y="164" fill="#9a978d" font-size="10">trigger match</text>
 
+    <rect x="480" y="120" width="130" height="60" rx="8" fill="#17181d" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="545" y="146" fill="#e9e7df">claim</text>
+    <text x="545" y="164" fill="#9a978d" font-size="10">decision / action</text>
+
+    <rect x="660" y="120" width="150" height="60" rx="8" fill="#17181d" stroke="#ad1457" stroke-width="1.5"/>
+    <text x="735" y="146" fill="#e9e7df">provenance</text>
