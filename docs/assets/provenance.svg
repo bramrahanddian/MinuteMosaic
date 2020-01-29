@@ -39,3 +39,9 @@
 
     <rect x="660" y="120" width="150" height="60" rx="8" fill="#17181d" stroke="#ad1457" stroke-width="1.5"/>
     <text x="735" y="146" fill="#e9e7df">provenance</text>
+    <text x="735" y="164" fill="#9a978d" font-size="10">rule + trigger + spans</text>
+  </g>
+
+  <!-- Connecting arrows -->
+  <g stroke="#9a978d" stroke-width="1.6" marker-end="url(#arrow)" fill="none">
+    <line x1="250" y1="150" x2="298" y2="150"/>
