@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220" role="img" aria-label="Animated stained-glass evidence timeline">
+  <title>minutemosaic: stained-glass evidence timeline</title>
+  <defs>
+    <linearGradient id="lead" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b1c22"/>
+      <stop offset="1" stop-color="#0a0a0c"/>
