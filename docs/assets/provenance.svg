@@ -45,3 +45,9 @@
   <!-- Connecting arrows -->
   <g stroke="#9a978d" stroke-width="1.6" marker-end="url(#arrow)" fill="none">
     <line x1="250" y1="150" x2="298" y2="150"/>
+    <line x1="430" y1="150" x2="478" y2="150"/>
+    <line x1="610" y1="150" x2="658" y2="150"/>
+  </g>
+
+  <!-- A "token" traveling the pipeline, showing data flow -->
+  <circle r="6" fill="#7fb0ff">
