@@ -10,3 +10,8 @@
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
+
+  <rect width="900" height="220" fill="url(#lead)"/>
+  <text x="24" y="34" fill="#e9e7df" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="18" font-weight="600">stained-glass evidence timeline</text>
+  <text x="24" y="54" fill="#9a978d" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">one facet per utterance · tinted by topic · every claim traces to source spans</text>
+
