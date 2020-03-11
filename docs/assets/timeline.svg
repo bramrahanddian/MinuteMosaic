@@ -21,3 +21,9 @@
       <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="0s"   repeatCount="indefinite"/>
     </rect>
     <rect x="98"  y="80" width="120" height="90" rx="4" fill="#e8a33d" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="0.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="222" y="80" width="90"  height="90" rx="4" fill="#2e7d32" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="0.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="316" y="80" width="150" height="90" rx="4" fill="#1565c0" opacity="0.35">
