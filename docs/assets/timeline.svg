@@ -33,3 +33,8 @@
       <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="1.6s" repeatCount="indefinite"/>
     </rect>
     <rect x="554" y="80" width="130" height="90" rx="4" fill="#00838f" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="2.0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="688" y="80" width="100" height="90" rx="4" fill="#ad1457" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="2.4s" repeatCount="indefinite"/>
+    </rect>
