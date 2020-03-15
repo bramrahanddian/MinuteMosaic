@@ -38,3 +38,9 @@
     <rect x="688" y="80" width="100" height="90" rx="4" fill="#ad1457" opacity="0.35">
       <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="2.4s" repeatCount="indefinite"/>
     </rect>
+    <rect x="792" y="80" width="84"  height="90" rx="4" fill="#e8a33d" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.95;0.55" dur="4s" begin="2.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- A playhead sweeping the timeline like an audio scrubber -->
