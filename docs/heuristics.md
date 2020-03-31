@@ -16,3 +16,9 @@ Boundaries between topics are opened when either:
 
 Each segment gets a label from its top keywords.
 
+## Decision extraction
+
+Ordered, strongest-first regex rules (see `extract.py`):
+
+| rule id             | example trigger              | base confidence |
+|---------------------|------------------------------|-----------------|
