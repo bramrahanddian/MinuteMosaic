@@ -22,3 +22,10 @@ Ordered, strongest-first regex rules (see `extract.py`):
 
 | rule id             | example trigger              | base confidence |
 |---------------------|------------------------------|-----------------|
+| `decide.explicit`   | "we decided", "decision is"  | 0.90            |
+| `decide.agree`      | "let's go with", "we'll ship"| 0.72            |
+| `decide.consensus`  | "agreed", "sounds good"      | 0.60            |
+| `decide.final`      | "finalized", "locked in"     | 0.55            |
+
+The first rule that matches an utterance wins. Small bonuses apply for complete
+sentences.
