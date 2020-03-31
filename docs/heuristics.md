@@ -29,3 +29,9 @@ Ordered, strongest-first regex rules (see `extract.py`):
 
 The first rule that matches an utterance wins. Small bonuses apply for complete
 sentences.
+
+## Action extraction
+
+| rule id             | example trigger                | base confidence |
+|---------------------|--------------------------------|-----------------|
+| `action.assign`     | "Mei will finalize the copy"   | 0.70            |
