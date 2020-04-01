@@ -35,3 +35,10 @@ sentences.
 | rule id             | example trigger                | base confidence |
 |---------------------|--------------------------------|-----------------|
 | `action.assign`     | "Mei will finalize the copy"   | 0.70            |
+| `action.imperative` | "please", "we need to", "todo:"| 0.62            |
+| `action.followup`   | "follow up", "circle back"     | 0.58            |
+
+Owner and due-date are inferred by separate patterns and, when found, add
+bounded confidence bonuses (`+0.12` owner, `+0.10` due). "I'll take that"
+attributes the owner to the current speaker.
+
