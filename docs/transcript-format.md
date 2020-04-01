@@ -9,3 +9,7 @@ transcript from whatever tool you already trust.
 Each line is an object with timing, a speaker, and text. The loader is forgiving
 about key spelling:
 
+| Concept | Accepted keys                                   |
+|---------|-------------------------------------------------|
+| start   | `start`, `start_time`, `ts`, `t0`, `begin`      |
+| end     | `end`, `end_time`, `t1`, `stop` (defaults to start) |
