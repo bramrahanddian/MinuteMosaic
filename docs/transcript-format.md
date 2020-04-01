@@ -17,3 +17,8 @@ about key spelling:
 | text    | `text`, `content`, `utterance`, `words` (list joined) |
 
 Times are seconds from meeting start, as numbers.
+
+## Rules
+
+- Blank lines and lines starting with `#` are ignored (handy for fixtures).
+- A line missing a start time or text is a hard error, reported with its line
