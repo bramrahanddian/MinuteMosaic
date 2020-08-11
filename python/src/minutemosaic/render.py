@@ -195,3 +195,32 @@ code {{ background:#0a0a0c; padding:1px 5px; border-radius:4px; color:#e8a33d; }
 a.ev {{ color:#7fb0ff; text-decoration:none; border-bottom:1px dotted #7fb0ff; }}
 .utt {{ display:flex; gap:10px; padding:6px 0; align-items:baseline;
   border-bottom:1px solid #202127; }}
+.utt:target {{ background:#23242b; box-shadow:0 0 0 6px #23242b; border-radius:4px; }}
+.ubar {{ width:4px; align-self:stretch; border-radius:2px; }}
+.ut {{ color:var(--muted); font-variant-numeric:tabular-nums; font-size:12px; min-width:44px; }}
+.us {{ color:#e8a33d; font-weight:600; min-width:80px; }}
+.ux {{ flex:1; }}
+footer {{ color:var(--muted); font-size:12px; padding:24px; text-align:center; }}
+</style></head>
+<body>
+<header><div class="wrap" style="padding:0">
+<h1>{title}</h1>
+<div class="sub">generated {generated} · source <code>{source}</code> · span {span}</div>
+</div></header>
+<div class="wrap">
+<div class="timeline" title="Stained-glass evidence timeline — one facet per utterance, tinted by topic">{facets}</div>
+<div class="grid">
+<div class="stat"><b>{u_count}</b><span>utterances</span></div>
+<div class="stat"><b>{s_count}</b><span>topics</span></div>
+<div class="stat"><b>{d_count}</b><span>decisions</span></div>
+<div class="stat"><b>{a_count}</b><span>actions</span></div>
+</div>
+<h2>Topics</h2><ul class="seg">{seg_rows}</ul>
+<h2>Decisions</h2>{decisions}
+<h2>Action Items</h2>{actions}
+<h2>Talk time</h2><ul class="seg">{talk}</ul>
+<h2>Transcript (evidence spans)</h2>{transcript}
+</div>
+<footer>minutemosaic · local-first, offline · every claim traces to its source spans ·
+no audio was processed and no transcription was performed by this tool</footer>
+</body></html>
