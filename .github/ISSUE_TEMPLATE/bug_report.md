@@ -10,3 +10,7 @@ assignees: ""
 
 **What you expected**
 
+**Reproduce**
+
+Smallest transcript snippet or file that triggers it, plus the exact command:
+
