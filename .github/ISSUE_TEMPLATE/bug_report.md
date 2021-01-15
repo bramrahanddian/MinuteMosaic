@@ -14,3 +14,6 @@ assignees: ""
 
 Smallest transcript snippet or file that triggers it, plus the exact command:
 
+```bash
+python -m minutemosaic decisions path/to/transcript.jsonl
+```
