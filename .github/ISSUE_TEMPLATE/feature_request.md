@@ -11,3 +11,6 @@ assignees: ""
 **Proposed behavior**
 
 **Does it add or change an extraction rule?**
+
+- [ ] Yes (proposed rule id, trigger pattern and rationale)
+- [ ] No
