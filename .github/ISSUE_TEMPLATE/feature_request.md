@@ -8,3 +8,6 @@ assignees: ""
 
 **What problem does this solve**
 
+**Proposed behavior**
+
+**Does it add or change an extraction rule?**
