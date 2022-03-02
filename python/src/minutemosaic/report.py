@@ -44,3 +44,11 @@ def build_report(
         "talk_time_seconds": talk_time,
     }
 
+    return MeetingReport(
+        title=title,
+        generated_at=_dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
+        source=source,
+        utterances=utterances,
+        segments=segments,
+        decisions=decisions,
+        actions=actions,
