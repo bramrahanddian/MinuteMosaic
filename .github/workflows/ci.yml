@@ -18,3 +18,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Byte-compile all sources (syntax check)
         run: python -m compileall -q python/src/minutemosaic
+      - name: Smoke test the CLI against the example transcript
+        working-directory: python/src
+        run: |
+          python -m minutemosaic segments ../../examples/product-sync.jsonl
+          python -m minutemosaic decisions ../../examples/product-sync.jsonl
+          python -m minutemosaic actions ../../examples/product-sync.jsonl
