@@ -24,3 +24,8 @@ jobs:
           python -m minutemosaic segments ../../examples/product-sync.jsonl
           python -m minutemosaic decisions ../../examples/product-sync.jsonl
           python -m minutemosaic actions ../../examples/product-sync.jsonl
+          python -m minutemosaic report ../../examples/product-sync.jsonl \
+            --title "CI" --html /tmp/r.html --json /tmp/r.json
+          test -s /tmp/r.html && test -s /tmp/r.json
+
+  swift:
