@@ -78,3 +78,17 @@ public enum TimelineRenderer {
         """
     }
 }
+
+extension Meeting {
+    /// Load a meeting from the JSON produced by the Python `report` command.
+    /// Only the fields the Swift model needs are read.
+    public static func fromReportJSON(_ data: Data) throws -> Meeting {
+        struct RawReport: Codable {
+            let title: String
+            let source: String
+            let utterances: [Utterance]
+        }
+        let decoder = JSONDecoder()
+        let raw = try decoder.decode(RawReport.self, from: data)
+        return Meeting(title: raw.title, source: raw.source, utterances: raw.utterances)
+    }
