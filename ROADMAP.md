@@ -13,3 +13,6 @@ The four checked milestones are shipped. The project intentionally makes no tran
 - [ ] Automated test suites.
 - [ ] Additional export formats.
 
+## Permanent constraints
+- No cloud accounts or mandatory synchronization.
+- No fabricated audio/transcription capabilities; current input is an existing transcript.
