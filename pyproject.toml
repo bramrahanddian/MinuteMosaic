@@ -31,3 +31,9 @@ Changelog = "https://github.com/bramrahanddian/MinuteMosaic/blob/main/CHANGELOG.
 
 [project.scripts]
 minutemosaic = "minutemosaic.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "python/src" }
+
+[tool.setuptools.packages.find]
+where = ["python/src"]
