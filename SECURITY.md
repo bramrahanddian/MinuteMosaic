@@ -15,3 +15,7 @@ a local model and renderer. If you find a security issue — a crash or resource
 exhaustion on hostile input, a path traversal, or a report that leaks transcript
 content beyond the line it flags — please report it privately with GitHub's
 "Report a vulnerability" button on the Security tab.
+
+We aim to acknowledge reports within 72 hours and to ship a fix or mitigation in
+the next patch release. Please do not open a public issue before a fix is
+available.
