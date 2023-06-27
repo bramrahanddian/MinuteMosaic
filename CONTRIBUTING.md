@@ -30,3 +30,9 @@ python -m minutemosaic report ../../examples/product-sync.jsonl \
 3. Every new extraction rule is readable, documented in the rule table in
    `docs/heuristics.md`, and keeps provenance (rule id + trigger + source spans).
 4. Keep the Python package dependency-free and offline.
+
+## Pull requests
+
+- One topic per PR, conventional commit titles (`feat:`, `fix:`, `docs:`...).
+- Describe the motivation, not just the diff.
+- By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
