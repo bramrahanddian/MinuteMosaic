@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# Swift
+.build/
+.swiftpm/
+Package.resolved
+
+# Generated example artifacts (regenerate with `make report`)
+examples/*.report.html
+examples/*.report.json
+examples/timeline.export.svg
