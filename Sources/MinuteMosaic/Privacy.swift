@@ -74,3 +74,15 @@ public enum RetentionEngine {
         }
 
         let transformed = meeting.utterances.map { u -> Utterance in
+            let speaker = settings.pseudonymizeSpeakers ? pseudonym(for: u.speaker) : u.speaker
+            let text = settings.redactTranscriptOnExport ? RetentionEngine.mask(u.text) : u.text
+            return Utterance(index: u.index, start: u.start, end: u.end, speaker: speaker, text: text)
+        }
+
+        return Meeting(title: meeting.title, source: meeting.source, utterances: transformed, events: meeting.events)
+    }
+
+    /// Replace word characters with a bullet, preserving whitespace so the
+    /// visible rhythm of the transcript survives while content does not.
+    static func mask(_ text: String) -> String {
+        String(text.map { $0.isWhitespace ? $0 : "•" })
