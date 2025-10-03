@@ -389,3 +389,64 @@
         "rule_id": "action.assign",
         "trigger": "mockups to marketing by end of week?",
         "utterance_indices": [
+          7
+        ],
+        "note": "matched action cue 'mockups to marketing by end of week?'; due inferred: end of week"
+      }
+    },
+    {
+      "action_id": 3,
+      "text": "Sure, I'll send the mockups to marketing by Thursday.",
+      "owner": "Mei",
+      "due_hint": "Thursday",
+      "speaker": "Mei",
+      "time": 51.3,
+      "segment_id": 5,
+      "confidence": 0.92,
+      "provenance": {
+        "rule_id": "action.assign",
+        "trigger": "mockups to marketing by Thursday.",
+        "utterance_indices": [
+          8
+        ],
+        "note": "matched action cue 'mockups to marketing by Thursday.'; owner inferred: Mei; due inferred: Thursday"
+      }
+    },
+    {
+      "action_id": 4,
+      "text": "We need to add better alerting on the payment service, that was the root cause.",
+      "owner": null,
+      "due_hint": null,
+      "speaker": "Ravi",
+      "time": 75.5,
+      "segment_id": 7,
+      "confidence": 0.62,
+      "provenance": {
+        "rule_id": "action.imperative",
+        "trigger": "We need to ",
+        "utterance_indices": [
+          10
+        ],
+        "note": "matched action cue 'We need to'"
+      }
+    },
+    {
+      "action_id": 5,
+      "text": "Let's adopt the new alerting playbook and circle back next week on progress.",
+      "owner": null,
+      "due_hint": null,
+      "speaker": "Ada",
+      "time": 81.3,
+      "segment_id": 8,
+      "confidence": 0.62,
+      "provenance": {
+        "rule_id": "action.imperative",
+        "trigger": "Let's ",
+        "utterance_indices": [
+          11
+        ],
+        "note": "matched action cue 'Let's'"
+      }
+    }
+  ]
+}
