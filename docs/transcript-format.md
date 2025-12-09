@@ -26,3 +26,10 @@ Times are seconds from meeting start, as numbers.
 - Utterance `index` is assigned in file order and is the anchor for provenance.
 
 ## Example
+
+```json
+{"start": 0.0, "end": 4.2, "speaker": "Ada", "text": "Let's start."}
+{"start": 4.5, "end": 9.1, "speaker": "Ravi", "text": "Build is green."}
+```
+
+See [`examples/product-sync.jsonl`](../examples/product-sync.jsonl).
