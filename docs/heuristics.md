@@ -42,3 +42,14 @@ Owner and due-date are inferred by separate patterns and, when found, add
 bounded confidence bonuses (`+0.12` owner, `+0.10` due). "I'll take that"
 attributes the owner to the current speaker.
 
+## Provenance
+
+Every decision and action carries a `Provenance` record:
+
+- `rule_id` — which rule fired
+- `trigger` — the exact matched phrase
+- `utterance_indices` — the source spans (file-order indices)
+- `note` — a human sentence explaining any inference
+
+Confidence is always clipped to `[0.05, 0.99]` — the tool never claims
+certainty it cannot justify.
