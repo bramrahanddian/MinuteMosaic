@@ -51,3 +51,14 @@
 
   <!-- A "token" traveling the pipeline, showing data flow -->
   <circle r="6" fill="#7fb0ff">
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="6s" repeatCount="indefinite" keyTimes="0;0.05;0.9;0.95;1"/>
+    <animateMotion dur="6s" repeatCount="indefinite" keyPoints="0;0.33;0.66;1" keyTimes="0;0.33;0.66;1" calcMode="linear"
+      path="M185,150 L365,150 L545,150 L735,150"/>
+  </circle>
+
+  <!-- Evidence spans returning as dotted feedback (audit trail) -->
+  <path d="M735,180 C600,240 320,240 185,182" stroke="#ad1457" stroke-width="1.4" fill="none" stroke-dasharray="4 5" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" values="0;-90" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="460" y="236" fill="#ad1457" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10" text-anchor="middle">every claim links back to its source spans</text>
+</svg>
