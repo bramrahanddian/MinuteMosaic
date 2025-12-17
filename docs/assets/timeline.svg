@@ -50,3 +50,14 @@
   </line>
 
   <!-- Evidence link markers pulsing under decision facets -->
+  <g font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="10" fill="#7fb0ff">
+    <text x="150" y="196">#1 evidence</text>
+    <circle cx="140" cy="192" r="3" fill="#7fb0ff">
+      <animate attributeName="r" values="3;5;3" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="378" y="196">#4 evidence</text>
+    <circle cx="368" cy="192" r="3" fill="#7fb0ff">
+      <animate attributeName="r" values="3;5;3" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
