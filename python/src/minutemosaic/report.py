@@ -52,3 +52,7 @@ def build_report(
         segments=segments,
         decisions=decisions,
         actions=actions,
+        stats=stats,
+    )
+
+# draft note 1383
