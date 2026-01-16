@@ -14,3 +14,10 @@ assignees: ""
 
 - [ ] Yes (proposed rule id, trigger pattern and rationale)
 - [ ] No
+
+**Does it change existing reports or the CLI contract?**
+
+- [ ] Yes (describe the migration path)
+- [ ] No
+
+<!-- draft note 1386 -->
