@@ -115,3 +115,26 @@ class ActionItem:
 
 @dataclass
 class MeetingReport:
+    title: str
+    generated_at: str
+    source: str
+    utterances: List[Utterance]
+    segments: List[TopicSegment]
+    decisions: List[Decision]
+    actions: List[ActionItem]
+    stats: Dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "schema": "minutemosaic/report/v1",
+            "title": self.title,
+            "generated_at": self.generated_at,
+            "source": self.source,
+            "stats": self.stats,
+            "utterances": [u.to_dict() for u in self.utterances],
+            "segments": [s.to_dict() for s in self.segments],
+            "decisions": [d.to_dict() for d in self.decisions],
+            "actions": [a.to_dict() for a in self.actions],
+        }
+
+# draft note 1385
