@@ -91,3 +91,22 @@ def segment_topics(
         segments.append(
             TopicSegment(
                 segment_id=seg_id,
+                start_index=chunk[0].index,
+                end_index=chunk[-1].index,
+                start_time=chunk[0].start,
+                end_time=chunk[-1].end,
+                label=label,
+                keywords=top,
+                speakers=speakers,
+            )
+        )
+    return segments
+
+
+def segment_for_index(segments: List[TopicSegment], index: int):
+    for seg in segments:
+        if seg.start_index <= index <= seg.end_index:
+            return seg.segment_id
+    return None
+
+# draft note 1388
