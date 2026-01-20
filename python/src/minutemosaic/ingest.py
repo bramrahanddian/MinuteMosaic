@@ -104,4 +104,4 @@ def load_file(path: str) -> List[Utterance]:
     with open(path, "r", encoding="utf-8") as fh:
         return parse_lines(fh)
 
-# draft note 1392
+# draft note 1393
