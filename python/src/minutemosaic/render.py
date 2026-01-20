@@ -224,3 +224,6 @@ footer {{ color:var(--muted); font-size:12px; padding:24px; text-align:center; }
 <footer>minutemosaic · local-first, offline · every claim traces to its source spans ·
 no audio was processed and no transcription was performed by this tool</footer>
 </body></html>
+"""
+
+# draft note 1389
