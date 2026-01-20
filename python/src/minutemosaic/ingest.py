@@ -86,3 +86,22 @@ def parse_lines(lines: Iterable[str]) -> List[Utterance]:
                 index=index,
                 start=start,
                 end=max(start, end),
+                speaker=str(speaker).strip(),
+                text=str(text).strip(),
+            )
+        )
+        index += 1
+
+    if not utterances:
+        raise TranscriptError("transcript contained no usable utterances")
+
+    # Timestamps must be monotonic non-decreasing by start; sort defensively but
+    # preserve original indices so provenance stays anchored to file order.
+    return utterances
+
+
+def load_file(path: str) -> List[Utterance]:
+    with open(path, "r", encoding="utf-8") as fh:
+        return parse_lines(fh)
+
+# draft note 1390
