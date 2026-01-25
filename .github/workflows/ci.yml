@@ -34,3 +34,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Show Swift version
+        run: swift --version
+      - name: Build the Swift package
+        run: swift build -v
+      - name: Render a timeline end-to-end from the example report JSON
+        run: |
+          python3 -m minutemosaic report ../../examples/product-sync.jsonl \
+            --title "CI" --json ../../examples/product-sync.report.json
+        working-directory: python/src
+      - name: Run mm-timeline against the generated report
+        run: swift run mm-timeline examples/product-sync.report.json --svg examples/timeline.export.svg
+
+# draft note 1396
