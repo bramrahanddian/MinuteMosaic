@@ -1,3 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: Rule reference
+    url: https://github.com/bramrahanddian/MinuteMosaic/blob/main/docs/heuristics.md
+    about: The rule table with example triggers and base confidences
+
+# draft note 1397
