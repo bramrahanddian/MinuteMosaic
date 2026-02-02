@@ -19,3 +19,9 @@ let package = Package(
         .executableTarget(
             name: "mm-timeline",
             dependencies: ["MinuteMosaic"],
+            path: "Sources/mm-timeline"
+        ),
+    ]
+)
+
+<!-- draft note 1400 -->
