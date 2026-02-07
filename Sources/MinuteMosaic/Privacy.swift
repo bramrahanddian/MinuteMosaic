@@ -86,3 +86,7 @@ public enum RetentionEngine {
     /// visible rhythm of the transcript survives while content does not.
     static func mask(_ text: String) -> String {
         String(text.map { $0.isWhitespace ? $0 : "•" })
+    }
+}
+
+<!-- draft note 1402 -->
