@@ -127,3 +127,27 @@ def build_parser() -> argparse.ArgumentParser:
     _add_common(p_dec)
     p_dec.set_defaults(func=_cmd_decisions)
 
+    p_act = sub.add_parser("actions", help="print detected action items with provenance")
+    _add_common(p_act)
+    p_act.set_defaults(func=_cmd_actions)
+
+    return parser
+
+
+def main(argv: Optional[List[str]] = None) -> int:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    try:
+        return args.func(args)
+    except TranscriptError as exc:
+        print(f"transcript error: {exc}", file=sys.stderr)
+        return 2
+    except FileNotFoundError as exc:
+        print(f"file not found: {exc.filename}", file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+
+# draft note 1405
