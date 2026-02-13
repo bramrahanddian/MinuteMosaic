@@ -45,3 +45,13 @@ swift-build:
 	swift build
 
 .PHONY: swift-timeline
+swift-timeline: report
+	swift run mm-timeline $(OUT_JSON) --svg examples/timeline.export.svg
+
+.PHONY: clean
+clean:
+	rm -f $(OUT_HTML) $(OUT_JSON) examples/timeline.export.svg
+	rm -rf .build
+	find $(PYSRC) -name '__pycache__' -type d -prune -exec rm -rf {} +
+
+<!-- draft note 1409 -->
