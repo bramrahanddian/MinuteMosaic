@@ -117,3 +117,25 @@ def extract_actions(utterances: List[Utterance], segment_of) -> List[ActionItem]
                 note_bits.append(f"due inferred: {due}")
             prov = Provenance(
                 rule_id=rule_id,
+                trigger=m.group(0),
+                utterance_indices=[u.index],
+                note="; ".join(note_bits),
+            )
+            out.append(
+                ActionItem(
+                    action_id=act_id,
+                    text=u.text,
+                    owner=owner,
+                    due_hint=due,
+                    speaker=u.speaker,
+                    time=u.start,
+                    segment_id=segment_of(u.index),
+                    confidence=conf,
+                    provenance=prov,
+                )
+            )
+            act_id += 1
+            break
+    return out
+
+# draft note 1408
