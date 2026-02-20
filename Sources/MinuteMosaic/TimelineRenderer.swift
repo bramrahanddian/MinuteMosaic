@@ -92,3 +92,6 @@ extension Meeting {
         let raw = try decoder.decode(RawReport.self, from: data)
         return Meeting(title: raw.title, source: raw.source, utterances: raw.utterances)
     }
+}
+
+<!-- draft note 1411 -->
