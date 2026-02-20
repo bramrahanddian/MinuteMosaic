@@ -17,3 +17,11 @@ Smallest transcript snippet or file that triggers it, plus the exact command:
 ```bash
 python -m minutemosaic decisions path/to/transcript.jsonl
 ```
+
+**Environment**
+
+- OS:
+- Python version (`python --version`):
+- MinuteMosaic version (`python -m minutemosaic --version`):
+
+<!-- draft note 1412 -->
