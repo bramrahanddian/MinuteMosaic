@@ -287,3 +287,43 @@ on disk, it is because your policy kept it there.
 No. It never touches audio and never joins anything. You feed it a transcript
 that already exists. The waveform artwork represents a transcript's rhythm.
 
+**Does it call an LLM or any API?**
+No. Python is stdlib-only with zero runtime dependencies. Swift makes no network
+calls. Run it on a plane.
+
+**Why heuristics instead of a model?**
+So you can audit every claim. A regex you can read beats a probability you can't.
+When we say confidence `0.92`, the [`docs/heuristics.md`](docs/heuristics.md)
+table tells you precisely why.
+
+**Can it be wrong?**
+Yes — heuristics miss and over-fire. That is exactly why every claim ships its
+source spans: the report is designed for a human to verify in seconds, not to be
+trusted blindly.
+
+**What about other languages / accents?**
+The rules are English-oriented today. Because they are just readable patterns,
+adding a language means adding patterns — no retraining, no data collection.
+
+**Where are the tests?**
+There are none yet, and the ROADMAP says so honestly. The code is verified
+manually against the bundled example and byte-compiled in CI.
+
+---
+
+## 🛠️ Contributing a new rule
+
+1. Add a `(rule_id, compiled_regex, base_confidence)` tuple to `_DECISION_RULES`
+   or `_ACTION_RULES` in `python/src/minutemosaic/extract.py`.
+2. Keep it readable — if a teammate can't predict when it fires, simplify it.
+3. Document it in the table in `docs/heuristics.md`.
+4. Run `make decisions` / `make actions` against the example and confirm the
+   provenance line shows your `rule_id` and trigger.
+
+That's the whole loop. New glass, same lead.
+
+<div align="center">
+<sub>MinuteMosaic · leaded glass for meetings · every pane traceable to the light that made it</sub>
+</div>
+
+<!-- draft note 1414 -->
