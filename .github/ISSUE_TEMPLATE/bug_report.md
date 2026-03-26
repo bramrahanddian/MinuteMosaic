@@ -24,4 +24,4 @@ python -m minutemosaic decisions path/to/transcript.jsonl
 - Python version (`python --version`):
 - MinuteMosaic version (`python -m minutemosaic --version`):
 
-<!-- draft note 1412 -->
+<!-- draft note 1419 -->
