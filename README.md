@@ -326,4 +326,4 @@ That's the whole loop. New glass, same lead.
 <sub>MinuteMosaic · leaded glass for meetings · every pane traceable to the light that made it</sub>
 </div>
 
-<!-- draft note 1414 -->
+<!-- draft note 1439 -->
