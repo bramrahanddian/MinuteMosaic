@@ -93,5 +93,3 @@ extension Meeting {
         return Meeting(title: raw.title, source: raw.source, utterances: raw.utterances)
     }
 }
-
-<!-- draft note 1420 -->
