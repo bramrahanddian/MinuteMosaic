@@ -88,5 +88,3 @@ public enum RetentionEngine {
         String(text.map { $0.isWhitespace ? $0 : "•" })
     }
 }
-
-<!-- draft note 1423 -->
