@@ -109,3 +109,5 @@ public struct Meeting: Codable, Equatable {
         guard let prov = event.provenance else { return [] }
         let set = Set(prov.utteranceIndices)
         return utterances.filter { set.contains($0.index) }
+    }
+}
