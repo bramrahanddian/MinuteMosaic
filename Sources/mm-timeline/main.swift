@@ -44,3 +44,13 @@ do {
     var meeting = try Meeting.fromReportJSON(data)
     if settings.redactTranscriptOnExport || settings.pseudonymizeSpeakers {
         meeting = RetentionEngine.applyExportPolicy(to: meeting, settings: settings)
+    }
+    print(TimelineRenderer.renderText(meeting))
+    if let svgOut {
+        let svg = TimelineRenderer.exportSVG(meeting)
+        try svg.write(toFile: svgOut, atomically: true, encoding: .utf8)
+        print("\nwrote SVG timeline -> \(svgOut)")
+    }
+} catch {
+    fail("error: \(error)")
+}
