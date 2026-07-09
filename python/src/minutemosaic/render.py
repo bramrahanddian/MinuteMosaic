@@ -225,5 +225,3 @@ footer {{ color:var(--muted); font-size:12px; padding:24px; text-align:center; }
 no audio was processed and no transcription was performed by this tool</footer>
 </body></html>
 """
-
-# draft note 1441
