@@ -108,5 +108,3 @@ def segment_for_index(segments: List[TopicSegment], index: int):
         if seg.start_index <= index <= seg.end_index:
             return seg.segment_id
     return None
-
-# draft note 1388
