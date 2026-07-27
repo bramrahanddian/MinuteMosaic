@@ -103,5 +103,3 @@ def parse_lines(lines: Iterable[str]) -> List[Utterance]:
 def load_file(path: str) -> List[Utterance]:
     with open(path, "r", encoding="utf-8") as fh:
         return parse_lines(fh)
-
-# draft note 1434
