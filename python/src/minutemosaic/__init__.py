@@ -10,5 +10,3 @@ a provenance trail back to the exact source spans that triggered it.
 __version__ = "0.4.0"
 
 __all__ = ["__version__"]
-
-# draft note 1430
