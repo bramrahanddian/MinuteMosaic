@@ -137,5 +137,3 @@ def extract_actions(utterances: List[Utterance], segment_of) -> List[ActionItem]
             act_id += 1
             break
     return out
-
-# draft note 1435
