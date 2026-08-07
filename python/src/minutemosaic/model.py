@@ -136,5 +136,3 @@ class MeetingReport:
             "decisions": [d.to_dict() for d in self.decisions],
             "actions": [a.to_dict() for a in self.actions],
         }
-
-# draft note 1385
