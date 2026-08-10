@@ -54,5 +54,3 @@ def build_report(
         actions=actions,
         stats=stats,
     )
-
-# draft note 1394
