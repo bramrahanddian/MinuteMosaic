@@ -23,5 +23,3 @@ let package = Package(
         ),
     ]
 )
-
-<!-- draft note 1445 -->
