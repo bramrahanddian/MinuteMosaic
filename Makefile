@@ -53,5 +53,3 @@ clean:
 	rm -f $(OUT_HTML) $(OUT_JSON) examples/timeline.export.svg
 	rm -rf .build
 	find $(PYSRC) -name '__pycache__' -type d -prune -exec rm -rf {} +
-
-<!-- draft note 1431 -->
