@@ -44,5 +44,3 @@ jobs:
         working-directory: python/src
       - name: Run mm-timeline against the generated report
         run: swift run mm-timeline examples/product-sync.report.json --svg examples/timeline.export.svg
-
-# draft note 1399
