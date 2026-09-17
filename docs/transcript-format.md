@@ -23,6 +23,8 @@ Times are seconds from meeting start, as numbers.
 - Blank lines and lines starting with `#` are ignored (handy for fixtures).
 - A line missing a start time or text is a hard error, reported with its line
   number. We never invent timing.
+- When the end time is absent it defaults to the start (zero duration) rather
+  than a guessed value.
 - Utterance `index` is assigned in file order and is the anchor for provenance.
 
 ## Example
