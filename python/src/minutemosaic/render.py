@@ -46,8 +46,8 @@ def render_html(report: MeetingReport) -> str:
     utter_by_index = {u.index: u for u in report.utterances}
 
     # Stained-glass timeline: one facet per utterance, tinted by segment.
-    span = max(1e-6, report.utterances[-1].end - report.utterances[0].start)
-    t0 = report.utterances[0].start
+    t0 = min(u.start for u in report.utterances)
+    span = max(1e-6, max(u.end for u in report.utterances) - t0)
     seg_of = {}
     for s in report.segments:
         for i in range(s.start_index, s.end_index + 1):
