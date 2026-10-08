@@ -6,6 +6,11 @@ its scope: it does **not** transcribe audio and has **no** remote service.
 
 ## [Unreleased]
 
+### Fixed
+- Meeting span and timeline geometry are now derived from the earliest start and
+  the latest end in the transcript, so overlapping or out-of-order timing cannot
+  skew the stats or push facets off the track.
+
 ### Changed
 - Rule wording in `docs/heuristics.md` is being reviewed for the next patch.
 
