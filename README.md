@@ -319,6 +319,8 @@ manually against the bundled example and byte-compiled in CI.
 3. Document it in the table in `docs/heuristics.md`.
 4. Run `make decisions` / `make actions` against the example and confirm the
    provenance line shows your `rule_id` and trigger.
+5. Byte-compile before opening the PR: `make compile-py` (or `python -m
+   compileall -q python/src/minutemosaic`).
 
 That's the whole loop. New glass, same lead.
 
