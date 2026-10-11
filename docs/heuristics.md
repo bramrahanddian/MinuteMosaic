@@ -52,4 +52,6 @@ Every decision and action carries a `Provenance` record:
 - `note` — a human sentence explaining any inference
 
 Confidence is always clipped to `[0.05, 0.99]` — the tool never claims
-certainty it cannot justify.
+certainty it cannot justify. The `note` field records each inference in plain
+words (matched cue, inferred owner, inferred due) so a report can be read
+without re-running the rules.
