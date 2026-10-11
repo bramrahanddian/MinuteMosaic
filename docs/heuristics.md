@@ -40,7 +40,9 @@ sentences.
 
 Owner and due-date are inferred by separate patterns and, when found, add
 bounded confidence bonuses (`+0.12` owner, `+0.10` due). "I'll take that"
-attributes the owner to the current speaker.
+attributes the owner to the current speaker. Due hints cover `by <weekday>`,
+`by next week`, `by end of day/week/month`, `by eod` / `by eow`, `by tomorrow`
+and `by <Month day>`.
 
 ## Provenance
 
