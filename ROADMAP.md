@@ -11,6 +11,7 @@ The four checked milestones are shipped. The project intentionally makes no tran
 ## Planned / explicitly not implemented
 - [ ] Optional, isolated local ASR integration.
 - [ ] Automated test suites.
+- [ ] A `--summary` mode that prints counts only, for dashboards and CI logs.
 - [ ] Additional export formats.
 
 ## Permanent constraints
