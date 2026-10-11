@@ -307,7 +307,9 @@ adding a language means adding patterns — no retraining, no data collection.
 
 **Where are the tests?**
 There are none yet, and the ROADMAP says so honestly. The code is verified
-manually against the bundled example and byte-compiled in CI.
+manually against the bundled example and byte-compiled in CI. The bundled
+example doubles as the smoke fixture: every CI run replays it through
+`segments`, `decisions`, `actions` and `report`.
 
 ---
 
